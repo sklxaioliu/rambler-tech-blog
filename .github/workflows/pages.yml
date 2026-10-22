@@ -1,0 +1,49 @@
+name: Publish blog to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - name: Expand initial source archive
+        if: hashFiles('package.json') == ''
+        run: |
+          mkdir -p tmp/import
+          unzip -q blog-source.zip -d tmp/import
+          rsync -a --exclude='.github' --exclude='.git' tmp/import/ ./
+          git add --all
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Expand verified blog source for normal maintenance'
+          git push
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build:pages
+      - run: npm run verify:pages
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
