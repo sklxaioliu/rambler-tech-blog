@@ -1,0 +1,14 @@
+node_modules/
+public/
+.deploy_git/
+db.json
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+
+tmp/
+
+_multiconfig.yml
+docs/screenshots/github-*.png

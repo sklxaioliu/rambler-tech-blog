@@ -1,0 +1,4 @@
+# GitHub Pages 独立项目配置；本地预览继续使用 _config.yml。
+# 部署目标为新仓库，不覆盖账号已有的主页及自定义域名。
+url: https://sklxaioliu.github.io/rambler-tech-blog
+root: /rambler-tech-blog/

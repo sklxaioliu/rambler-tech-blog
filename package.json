@@ -1,0 +1,42 @@
+{
+  "name": "rambler-tech-blog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "server": "hexo server",
+    "start": "hexo server --ip 127.0.0.1 --port 4000",
+    "verify": "node tools/verify.cjs",
+    "guide": "node tools/update-learning.cjs",
+    "check:http": "node tools/http-check.cjs",
+    "build:pages": "hexo generate --config _config.yml,_config.pages.yml",
+    "verify:pages": "node tools/verify.cjs --pages",
+    "preview:pages": "node tools/preview-pages.cjs"
+  },
+  "hexo": {
+    "version": "8.1.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "7.3.1",
+    "hexo": "8.1.2",
+    "hexo-cli": "4.3.2",
+    "hexo-generator-archive": "2.0.0",
+    "hexo-generator-category": "2.0.0",
+    "hexo-generator-feed": "4.0.0",
+    "hexo-generator-index": "4.0.0",
+    "hexo-generator-searchdb": "1.5.0",
+    "hexo-generator-sitemap": "3.0.1",
+    "hexo-generator-tag": "2.0.0",
+    "hexo-renderer-marked": "7.0.1",
+    "hexo-renderer-pug": "3.0.0",
+    "hexo-renderer-stylus": "3.0.1",
+    "hexo-server": "3.0.0",
+    "hexo-theme-butterfly": "5.7.0",
+    "medium-zoom": "1.1.0",
+    "typed.js": "3.0.0"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

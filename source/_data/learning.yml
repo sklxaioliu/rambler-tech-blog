@@ -1,0 +1,58 @@
+# 首页栏目与学习路线共用，新增文章后将 slug 加入 posts 以纳入推荐顺序。
+- name: SQL 数据库
+  slug: sql
+  icon: fas fa-database
+  style: portal-sql
+  description: 从增删改查，到存储过程、游标与备份。
+  track: SQL / MySQL
+  cover: sql
+  posts: [sql-basics, mysql-install, sql-crud, sql-joins, sql-performance, sql-schema, sql-aggregation, sql-window-cte, sql-views-triggers, sql-procedures, sql-cursors, sql-backup-security]
+- name: 虚拟机技术
+  slug: virtualization
+  icon: fas fa-layer-group
+  style: portal-vm
+  description: 给每一次好奇，一个实验空间。
+  track: VMware / Linux
+  cover: vm
+  posts: [vm-basics, vmware-install, windows-vm, ubuntu-vm, vm-network-snapshots]
+- name: 网络协议
+  slug: networking
+  icon: fas fa-globe
+  style: portal-network
+  description: 看见连接，理解数据如何抵达。
+  track: TCP / HTTP
+  cover: network
+  posts: [network-basics, network-models, ip-subnet-gateway, tcp-udp, http-https-dns]
+- name: Excel 办公
+  slug: excel
+  icon: fas fa-file-excel
+  style: portal-excel
+  description: 从规范表格，到公式、透视与数据分析。
+  track: 公式 / 数据分析
+  cover: excel
+  posts: [excel-basics, excel-formulas, excel-lookup, excel-cleaning, excel-pivot, excel-project]
+- name: Word 办公
+  slug: word
+  icon: fas fa-file-word
+  style: portal-word
+  description: 从样式排版，到长文档与正式交付。
+  track: 排版 / 报告写作
+  cover: word
+  posts: [word-basics, word-sections, word-tables-images, word-long-documents, word-review-merge, word-project]
+- name: PPT 演示
+  slug: ppt
+  icon: fas fa-file-powerpoint
+  style: portal-ppt
+  description: 从表达结构，到视觉设计与现场演示。
+  track: 设计 / 演讲交付
+  cover: ppt
+  posts: [ppt-story, ppt-master, ppt-design, ppt-data, ppt-animation, ppt-delivery]
+
+- name: 信用体系建设
+  slug: credit
+  icon: fas fa-shield-alt
+  style: portal-credit
+  description: 从社会信用基础，到信用修复与文明城市建设。
+  track: 国家政策 / 实务入门
+  cover: credit
+  posts: [social-credit-system, credit-repair-guide, civilized-city-guide]

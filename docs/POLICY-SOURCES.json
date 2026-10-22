@@ -1,0 +1,40 @@
+[
+  {
+    "file": "credit-repair-order-36.pdf",
+    "title": "信用修复管理办法",
+    "id": "国家发展改革委令第36号",
+    "url": "https://www.ndrc.gov.cn/xxgk/zcfb/fzggwl/202511/P020251126424276238205.pdf",
+    "pages": 9,
+    "images": [
+      1,
+      4,
+      5
+    ],
+    "checked": "2026-10-22",
+    "sha256": "f0d5530504be5c81b6afcc2c2e69eb328733b9af8ecea55b6b85eca8401d60e0"
+  },
+  {
+    "file": "public-credit-directory-2026.pdf",
+    "title": "全国公共信用信息基础目录（2026年版）",
+    "id": "发改财金〔2026〕447号附件",
+    "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202604/P020260403657746575020.pdf",
+    "pages": 27,
+    "images": [
+      1
+    ],
+    "checked": "2026-10-22",
+    "sha256": "a43ef768e523a80822f95bf1f231a494c02fbf18eec891baad2487d241fabd2c"
+  },
+  {
+    "file": "credit-sanctions-list-2026.pdf",
+    "title": "全国失信惩戒措施基础清单（2026年版）",
+    "id": "发改财金〔2026〕447号附件",
+    "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202604/P020260403657746745075.pdf",
+    "pages": 44,
+    "images": [
+      1
+    ],
+    "checked": "2026-10-22",
+    "sha256": "7f541b41393419b2c6e95c7b0c1f0fcaadd03106e48227ee8fccf614092a0a20"
+  }
+]

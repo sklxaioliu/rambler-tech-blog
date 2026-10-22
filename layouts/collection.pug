@@ -1,0 +1,29 @@
+extends includes/layout.pug
+
+block content
+  - const module = site.data.learning.find(item => item.name === page.category)
+  #category.study-collection
+    .collection-intro
+      span.interior-eyebrow LEARN AT YOUR OWN PACE
+      h2=page.category
+      p=module ? module.description : '从一个问题开始，把知识一步步理解清楚。'
+      .collection-links
+        a(href=url_for('/guide/'))
+          i.far.fa-compass
+          | 按学习路线开始
+        span=site.posts.toArray().filter(post => post.categories.toArray().some(category => category.name === page.category)).length + ' 篇学习笔记'
+    .lesson-grid.article-sort
+      each post in page.posts.toArray()
+        - const lessonIndex = module ? module.posts.indexOf(post.slug) : -1
+        a.lesson-card.article-sort-item.article-sort-item-title(href=url_for(post.path))
+          .lesson-card-top
+            span.lesson-icon
+              i(class=module ? module.icon : 'fas fa-book-open')
+            span.lesson-series=lessonIndex >= 0 ? 'LESSON ' + String(lessonIndex + 1).padStart(2,'0') : 'LEARNING NOTE'
+            i.fas.fa-arrow-up-right-from-square
+          h3=post.title
+          p=post.description
+          .lesson-card-bottom
+            span 概念解释 · 操作示范 · 练习复盘
+            time(datetime=date_xml(post.date))=date(post.date,'YYYY.MM.DD')
+    include includes/pagination.pug

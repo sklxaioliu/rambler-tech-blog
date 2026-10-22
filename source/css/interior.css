@@ -1,0 +1,96 @@
+/* 内页设计：漫画背景 + 透明磨砂阅读面板。只影响首页以外页面。 */
+body:not(:has(#portal-home)){position:relative;isolation:isolate;background:#141525;color:#e8e7f2;--font-color:#e8e7f2;--text-highlight-color:#f6f3ff;--card-bg:rgba(30,30,50,.83);--sidebar-bg:#222237;--search-bg:#222237;--search-input-color:#f2edff;--search-a-color:#eae6f5;--toc-link-color:#bdb5cf;--tab-botton-bg:#33304c;--light-grey:#ffffff16;--white:#f4f0ff;--btn-bg:#8f79bc;--blockquote-bg:#b39ae315;--global-bg:#141525;--hr-border:#a28ac550;--card-box-shadow:0 15px 45px #05051124}
+body:not(:has(#portal-home))::before{content:'';position:fixed;inset:0;background:url('../img/portal-background.jpg') center/cover no-repeat;z-index:-2;pointer-events:none}
+body:not(:has(#portal-home))::after{content:'';position:fixed;inset:0;background:linear-gradient(120deg,#10101c99,#17132480 50%,#111326a8);z-index:-1;pointer-events:none}
+[data-theme=dark] body:not(:has(#portal-home)){--card-bg:rgba(16,17,31,.92);--font-color:#dedbe9}
+[data-theme=dark] body:not(:has(#portal-home))::after{background:#0a0a178c}
+body:not(:has(#portal-home)) #body-wrap{background:transparent}
+body:not(:has(#portal-home)) #web_bg{display:none}
+body:not(:has(#portal-home)) #page-header{background:transparent!important;background-image:none!important;transition:none}
+body:not(:has(#portal-home)) #page-header::before{background:linear-gradient(#0c0b1838,transparent)!important}
+body:not(:has(#portal-home)) #page-header.not-home-page{height:290px}
+body:not(:has(#portal-home)) #page-header.post-bg{height:325px}
+body:not(:has(#portal-home)) #page-site-info{top:145px}
+body:not(:has(#portal-home)) #page-site-info::before{content:'RAMBLER / KNOWLEDGE COLLECTION';display:block;text-align:center;font-size:10px;letter-spacing:.26em;color:#e6dafa;margin-bottom:14px}
+body:not(:has(#portal-home)) #page-site-info #site-title{font-size:clamp(30px,4vw,48px)!important;letter-spacing:.12em;line-height:1.5}
+body:not(:has(#portal-home)) #nav{height:64px;padding:0 max(26px,4%);font-size:18px}
+body:not(:has(#portal-home)) #page-header.nav-fixed #nav,body:not(:has(#portal-home)) #page-header.fixed #nav{background:#1c192cba!important;backdrop-filter:blur(22px);border-bottom:1px solid #eee5ff20;box-shadow:none}
+body:not(:has(#portal-home)) #nav a,body:not(:has(#portal-home)) #nav span.site-page,body:not(:has(#portal-home)) #nav #toggle-menu{color:#efebf8!important}
+body:not(:has(#portal-home)) #nav .menus_item_child{background:#25213be8}
+body:not(:has(#portal-home)) #content-inner{max-width:1270px;padding:0 24px 35px;gap:25px;margin-top:0}
+body:not(:has(#portal-home)) :is(#post,#page,#archive,#tag,#category,.card-widget,.recent-post-item){background:var(--card-bg)!important;border:1px solid #ece3ff25!important;border-radius:22px!important;box-shadow:0 18px 55px #04031624!important;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);color:var(--font-color)}
+body:not(:has(#portal-home)) #post{padding:40px 46px}
+body:not(:has(#portal-home)) #post-info{bottom:42px;text-shadow:0 3px 18px #080716}
+body:not(:has(#portal-home)) #post-info .post-title{font-size:clamp(24px,3vw,36px);font-weight:650;line-height:1.5;max-width:1230px}
+body:not(:has(#portal-home)) #post-info #post-meta{opacity:.9;font-size:12px;margin-top:12px}
+body:not(:has(#portal-home)) #article-container{font-size:16px;line-height:2.05;letter-spacing:.015em;color:var(--font-color);overflow-wrap:anywhere}
+body:not(:has(#portal-home)) #article-container :is(h1,h2,h3,h4){color:#f1ebfc;scroll-margin-top:86px}
+body:not(:has(#portal-home)) #article-container h2{font-size:24px;line-height:1.5;border-bottom:1px solid #d2b9ff24;padding:0 0 15px;margin:2.3em 0 1em;position:relative}
+body:not(:has(#portal-home)) #article-container h2::after{content:'';position:absolute;bottom:-1px;left:0;width:46px;height:2px;background:#b6a1df;border-radius:3px}
+body:not(:has(#portal-home)) #article-container h3{font-size:19px;margin:1.8em 0 .7em;line-height:1.7}
+body:not(:has(#portal-home)) #article-container p{margin-bottom:1.15em}
+body:not(:has(#portal-home)) #article-container li{margin-bottom:8px}
+body:not(:has(#portal-home)) #article-container a{color:#d5bdfa;text-decoration-color:#d5bdfa66}
+body:not(:has(#portal-home)) #article-container a:hover{color:#fff}
+body:not(:has(#portal-home)) #article-container blockquote{color:#ded2ef;border-left:3px solid #b59adf;background:#b79ae814;border-radius:0 12px 12px 0;padding:17px 21px;margin:24px 0}
+body:not(:has(#portal-home)) #article-container blockquote p:last-child{margin:0}
+body:not(:has(#portal-home)) #article-container :not(pre)>code{background:#c6acf321;color:#eed9ff;border:1px solid #ddc5ff1c;border-radius:5px;padding:2px 5px}
+body:not(:has(#portal-home)) #article-container figure.highlight{background:#171727!important;border:1px solid #d2bfff26;border-radius:14px;margin:25px 0;box-shadow:0 9px 25px #08071525;max-width:100%}
+body:not(:has(#portal-home)) #article-container .highlight-tools{background:#28263e!important;border-bottom:1px solid #ccc0eb16;color:#d9cdeb}
+body:not(:has(#portal-home)) #article-container figure.highlight pre{background:transparent!important;font-size:13px;line-height:1.8}
+body:not(:has(#portal-home)) #article-container .table-wrap{border:1px solid #e1cbff24;border-radius:12px;margin:24px 0}
+body:not(:has(#portal-home)) #article-container table :is(th,td){border-color:#e1cbff22;padding:12px 15px;line-height:1.8}
+body:not(:has(#portal-home)) #article-container table th{background:#9b83c51d;color:#e9ddfa}
+body:not(:has(#portal-home)) #article-container table tr{background:transparent!important}
+body:not(:has(#portal-home)) #article-container table tr:nth-child(even){background:#d7c2ff07!important}
+body:not(:has(#portal-home)) #article-container hr{border-color:#b59adf38}
+body:not(:has(#portal-home)) #aside-content .card-widget{padding:23px}
+body:not(:has(#portal-home)) #aside-content :is(.item-headline,.author-info-name,.card-info-data-item,.headline){color:#ece2fa}
+body:not(:has(#portal-home)) #aside-content a{color:#d9d1e5}
+body:not(:has(#portal-home)) #aside-content .card-info-social-icons a{color:#c4a9ec}
+body:not(:has(#portal-home)) #card-info-btn{background:#a089cb29!important;border:1px solid #bea1e13b;border-radius:10px;color:#f2e7ff!important}
+body:not(:has(#portal-home)) #card-toc .toc-content .toc-link{color:#c6bed6;border-radius:7px;padding:5px 9px;font-size:12px;line-height:1.7}
+body:not(:has(#portal-home)) #card-toc .toc-content .toc-link.active{background:#a48bc130;color:#f2dfff;border-left:2px solid #d3b7ff}
+body:not(:has(#portal-home)) #post .post-copyright{border:1px solid #cfb8f02b;background:#c0a3e909;border-radius:12px;padding:18px;color:#bcb1d0;font-size:12px}
+body:not(:has(#portal-home)) :is(.relatedPosts,#pagination.pagination-post){margin-top:30px}
+body:not(:has(#portal-home)) #pagination.pagination-post :is(.prev-post,.next-post),body:not(:has(#portal-home)) .relatedPosts-list>div{background:#3c33567a;border:1px solid #d9c1ff24;border-radius:13px}
+body:not(:has(#portal-home)) #pagination.pagination-post img,body:not(:has(#portal-home)) .relatedPosts-list img{opacity:.08;filter:grayscale(1)}
+body:not(:has(#portal-home)) #footer{background:#1814258a!important;border-top:1px solid #d0b9ee1f;backdrop-filter:blur(18px);margin-top:20px}
+body:not(:has(#portal-home)) #footer .footer-other{padding:25px 20px;color:#bfb5cf;font-size:11px}
+body:not(:has(#portal-home)) #rightside button{background:#352b4bdb!important;border:1px solid #d9bdfa38;border-radius:10px;color:#e4d5f5!important;backdrop-filter:blur(12px)}
+body:not(:has(#portal-home)) #pagination .page-number{border-radius:8px;border:1px solid #dfcbf626;background:#372d4d5e;color:#e5d8f6}
+body:not(:has(#portal-home)) #pagination .page-number.current{background:#b09ac8;color:#151020}
+body:not(:has(#portal-home)) .search-dialog{background:#211e34ed!important;border:1px solid #d7beff38;border-radius:19px;backdrop-filter:blur(25px);color:#ede4fa}
+body:not(:has(#portal-home)) .search-dialog input{color:#ede4fa}
+body:not(:has(#portal-home)) .search-result-title{color:#e0c4ff!important}
+.interior-eyebrow{font-size:9px;letter-spacing:.2em;color:#c6b4df}
+.collection-intro{padding:0 0 28px;margin-bottom:25px;border-bottom:1px solid #d5bef024}
+.collection-intro h2{font-size:28px;margin:12px 0 9px;color:#f6edff;letter-spacing:.05em}
+.collection-intro p{color:#bfb4cf;font-size:13px;margin:0 0 17px}
+.collection-links{display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:11px;color:#b3a4c9}
+.collection-links a{color:#dcc4fc;padding:8px 12px;background:#b397db16;border:1px solid #b49bd02c;border-radius:9px}
+.collection-links a i{margin-right:8px}
+.study-collection{padding:30px!important}
+.lesson-grid.article-sort{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin:0;padding:0;border:0}
+.lesson-grid.article-sort::before,.lesson-grid .article-sort-item::before{display:none!important}
+.lesson-grid .lesson-card{display:flex;flex-direction:column;position:relative;height:auto!important;margin:0!important;padding:22px!important;border:1px solid #dfc4ff24;background:linear-gradient(145deg,#c3a8ec12,#8983b509);border-radius:15px;color:#ece2fa;transition:transform .2s,border-color .2s;text-decoration:none}
+.lesson-card:hover{transform:translateY(-3px);border-color:#d4b4ff6b!important}
+.lesson-card-top{display:flex;align-items:center;gap:11px;margin-bottom:20px}
+.lesson-icon{width:35px;height:35px;display:grid;place-items:center;border:1px solid #c6a4ed2c;background:#c4a3f014;border-radius:10px;color:#d7bafa;font-size:16px}
+.lesson-series{font-size:9px;letter-spacing:.13em;color:#beacd4}
+.lesson-card-top>i{font-size:10px;margin-left:auto;color:#b29acb}
+.lesson-card h3{font-size:17px;line-height:1.7;margin:0 0 12px;color:#f1e7ff;font-weight:600}
+.lesson-card p{font-size:12px;line-height:1.9;margin:0 0 22px;color:#c1b4d1}
+.lesson-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:9px;margin-top:auto;padding-top:13px;border-top:1px solid #e4cdff12;font-size:8px;line-height:1.8;color:#ab9abd}
+body:not(:has(#portal-home)) #archive .article-sort,body:not(:has(#portal-home)) #tag .article-sort{border-color:#c3a6e251}
+body:not(:has(#portal-home)) .article-sort-title::before,body:not(:has(#portal-home)) .article-sort-item::before{border-color:#b99ad6;background:#3e3055}
+body:not(:has(#portal-home)) .article-sort-item a{color:#e5d8f5}
+body:not(:has(#portal-home)) .article-sort-item-img{border-radius:9px;filter:saturate(.25)}
+body:not(:has(#portal-home)) .category-list{list-style:none;padding:0!important;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+body:not(:has(#portal-home)) .category-list-item{padding:18px!important;border:1px solid #ceb2ef2b;border-radius:13px;background:#b99ade0c;margin:0!important}
+body:not(:has(#portal-home)) .category-list-item::before{display:none}
+body:not(:has(#portal-home)) .category-list-link{color:#e5cffa!important}
+body:not(:has(#portal-home)) .tag-cloud-list a{border:1px solid #c3a4e531;background:#b395d510;border-radius:9px;padding:5px 12px;margin:6px;color:#dcc5f3!important;font-size:14px!important}
+@media(max-width:1000px){body:not(:has(#portal-home)) #post{padding:30px}.lesson-grid.article-sort{grid-template-columns:1fr}.lesson-card-bottom{font-size:9px}}
+@media(max-width:768px){body:not(:has(#portal-home)) #content-inner{padding:0 13px 25px}body:not(:has(#portal-home)) #page-header.not-home-page{height:245px}body:not(:has(#portal-home)) #page-header.post-bg{height:285px}body:not(:has(#portal-home)) #page-site-info{top:125px}body:not(:has(#portal-home)) #page-site-info::before{font-size:8px;letter-spacing:.15em}body:not(:has(#portal-home)) #post-info{bottom:30px}body:not(:has(#portal-home)) #post-info .post-title{font-size:23px;line-height:1.6}body:not(:has(#portal-home)) #post{padding:25px 20px!important}body:not(:has(#portal-home)) #article-container{font-size:15px;line-height:2}body:not(:has(#portal-home)) #article-container h2{font-size:21px}body:not(:has(#portal-home)) #article-container h3{font-size:18px}.study-collection{padding:24px 18px!important}.lesson-card h3{font-size:16px}.collection-intro h2{font-size:25px}.collection-links{font-size:10px}.lesson-grid.article-sort{gap:13px}body:not(:has(#portal-home)) .category-list{grid-template-columns:1fr}body:not(:has(#portal-home)) #nav{padding:0 18px}body:not(:has(#portal-home)) #aside-content #card-toc{background:#211c34f5!important}}
+@media(prefers-reduced-motion:reduce){.lesson-card:hover{transform:none}}

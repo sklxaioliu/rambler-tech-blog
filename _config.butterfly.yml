@@ -1,0 +1,153 @@
+# 个性化覆盖文件：主题通过 npm 更新，此处配置与主题源码分离
+nav:
+  fixed: true
+  display_title: true
+menu:
+  首页: / || fas fa-home
+  学习路线: /guide/ || fas fa-compass
+  分类: /categories/ || fas fa-folder-open
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  关于: /about/ || fas fa-user
+social:
+  fas fa-rss: /atom.xml || RSS 订阅 || '#eea463'
+favicon: /img/avatar.svg
+avatar:
+  img: /img/avatar.jpg
+  effect: false
+index_img: /img/portal-background.jpg
+default_top_img: /img/portal-background.jpg
+archive_img: /img/portal-background.jpg
+category_img: /img/portal-background.jpg
+tag_img: /img/portal-background.jpg
+index_top_img_height: 100vh
+cover:
+  default_cover: [/img/sql.svg, /img/vm.svg, /img/network.svg]
+error_img:
+  post_page: /img/network.svg
+  flink: /img/avatar.svg
+error_404:
+  enable: true
+  subtitle: 页面走丢了，点击上方站点名称返回首页
+  background: /img/portal-background.jpg
+subtitle:
+  enable: true
+  effect: true
+  source: false
+  typed_option:
+    typeSpeed: 90
+    backSpeed: 35
+    backDelay: 2600
+  sub:
+    - 记录学习过程，分享技术知识
+    - 从一行 SQL，到理解整个网络
+    - 保持好奇，让知识慢慢生长
+index_layout: 3
+index_post_content:
+  method: 1
+toc:
+  post: true
+  page: true
+  number: true
+  expand: false
+  scroll_percent: true
+code_blocks:
+  theme: pale night
+  macStyle: true
+  copy: true
+  language: true
+  word_wrap: false
+  shrink: false
+related_post:
+  enable: true
+  limit: 3
+post_pagination: 2
+aside:
+  enable: true
+  mobile: true
+  card_author:
+    enable: true
+    description: 一个持续学习的技术探索者。把复杂概念拆成小步骤，把每次实践整理成可复习的笔记。
+    button:
+      enable: true
+      icon: fas fa-compass
+      text: 开始学习
+      link: /guide/
+  card_announcement:
+    enable: true
+    content: 七大学习模块已上线，新增信用体系建设：读懂国家政策、信用修复与文明城市建设。技术教程边读边练，政策事项请核对官方现行要求。
+  card_recent_post:
+    enable: true
+    limit: 5
+  card_tags:
+    enable: true
+    orderby: name
+    limit: 25
+footer:
+  owner:
+    enable: true
+    since: 2026
+  custom_text: '保持好奇 · 持续记录 · 一起进步 <a href="/atom.xml">RSS</a> · <a href="/sitemap.xml">站点地图</a>'
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+display_mode: light
+rightside_scroll_percent: true
+rightside_item_order:
+  enable: true
+  hide: readmode,hideAside
+  show: darkmode,toc
+rightside_config_animation: false
+search:
+  use: local_search
+  placeholder: 搜索 Excel、Word、PPT、SQL……
+  local_search:
+    preload: false
+    top_n_per_article: 2
+    unescape: true
+    pagination:
+      enable: true
+      hitsPerPage: 8
+lightbox: medium_zoom
+lazyload:
+  enable: true
+  native: true
+  field: site
+share:
+  use:
+busuanzi:
+  site_uv: false
+  site_pv: false
+  page_pv: false
+enter_transitions: true
+rounded_corners_ui: true
+theme_color:
+  enable: true
+  main: '#a994dd'
+  paginator: '#a994dd'
+  button_hover: '#c0b0ec'
+  text_selection: '#b8a2ed'
+  toc_color: '#a994dd'
+font:
+  global_font_size: 16px
+  font_family: '"Segoe UI", "Microsoft YaHei", sans-serif'
+  code_font_family: 'Consolas, "Courier New", monospace'
+structured_data:
+  enable: true
+# 只本地化使用中的库，复制逻辑见 scripts/local-assets.js
+CDN:
+  internal_provider: local
+  third_party_provider: jsdelivr
+  option:
+    fontawesome: /vendor/fontawesome/css/all.min.css
+    typed: /vendor/typed/typed.umd.js
+    medium_zoom: /vendor/medium-zoom/medium-zoom.min.js
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
+    - <link rel="stylesheet" href="/css/portal.css">
+    - <link rel="stylesheet" href="/css/interior.css">
+    - <link rel="alternate" type="application/atom+xml" title="个人技术知识库" href="/atom.xml">
+  bottom:
+    - <script src="/js/custom.js" defer></script>

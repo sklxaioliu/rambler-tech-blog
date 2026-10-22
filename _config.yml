@@ -1,0 +1,70 @@
+# 网站基础信息；上线前把 url 改为你的真实域名（不要以 / 结尾）
+title: 个人技术知识库
+subtitle: 记录学习过程，分享技术知识
+description: 面向初学者的技术与办公知识库，系统学习 SQL、虚拟机、网络、Excel、Word 和 PPT。
+keywords: SQL,MySQL,游标,存储过程,Excel,Word,PPT,虚拟机,网络协议,计算机入门
+author: Rambler
+language: zh-CN
+timezone: Asia/Shanghai
+url: http://localhost:4000
+root: /
+permalink: posts/:title/
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+new_post_name: :title.md
+default_layout: post
+external_link:
+  enable: true
+  field: site
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: false
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  wrap: true
+  hljs: false
+index_generator:
+  path: ''
+  per_page: 6
+  order_by: -date
+default_category: 未分类
+# 固定英文路径，方便分享与部署；显示名称仍为中文
+category_map:
+  SQL 数据库: sql
+  虚拟机技术: virtualization
+  网络协议: networking
+  Excel 办公: excel
+  Word 办公: word
+  PPT 演示: ppt
+  信用体系建设: credit
+tag_map:
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: date
+per_page: 10
+pagination_dir: page
+theme: butterfly
+search:
+  path: search.xml
+  field: post
+  content: true
+sitemap:
+  path: sitemap.xml
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  content: false
+# 本地预览不公开监听局域网；部署采用静态托管，见 README
+server:
+  ip: 127.0.0.1
+  port: 4000
+deploy:
+  type: ''

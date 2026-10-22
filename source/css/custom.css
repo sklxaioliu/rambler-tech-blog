@@ -1,0 +1,44 @@
+/* 独立的设计层：保留 Butterfly 阅读功能，更新主题时无需改源码。 */
+:root{--card-radius:20px;--rambler-muted:#738489}
+body{background:#f3f6f6}
+#page-header.full_page{min-height:600px}
+#page-header.full_page:before{background:linear-gradient(180deg,rgba(9,26,42,.12),rgba(9,26,42,.08) 45%,rgba(9,26,42,.32))}
+#nav{padding:0 4%;height:72px;letter-spacing:.04em}
+#site-title{font-size:clamp(2.15rem,5.5vw,4.2rem)!important;letter-spacing:.1em;font-weight:800;text-shadow:0 4px 25px #10233170}
+#site-info{text-align:center}
+#site-subtitle{margin-top:20px;font-size:clamp(.95rem,2.2vw,1.35rem)!important;letter-spacing:.12em}
+#site-info::before{content:'RAMBLER / LEARNING IN PUBLIC';display:block;font-size:12px;letter-spacing:.32em;color:#b2e3df;margin-bottom:22px}
+#site-info::after{content:'SQL DATABASE   /   VIRTUALIZATION   /   NETWORKING';display:block;margin:38px 12px 0;font-size:10px;letter-spacing:.18em;color:#d4e5e6;line-height:2}
+.layout{max-width:1240px}
+#recent-posts>.recent-post-item,.card-widget,#page,#post,#archive,#tag,#category{border:1px solid #72979316;border-radius:var(--card-radius)!important;box-shadow:0 8px 30px #233b4810!important}
+#recent-posts>.recent-post-item{margin-top:24px;overflow:hidden}
+#recent-posts>.recent-post-item>.recent-post-info>.article-title{font-weight:650;line-height:1.5}
+#recent-posts>.recent-post-item .post_cover img{object-fit:cover}
+#post #article-container{line-height:1.95}
+#article-container h2{margin-top:2.1em;padding-bottom:8px;border-bottom:1px solid #829b9b25}
+#article-container p{margin:0 0 1.2em}
+#article-container a:not(.fancybox){text-underline-offset:4px}
+#article-container figure.highlight{border-radius:12px;margin:22px 0}
+#footer{background:#112c38}
+#rightside>div>button{border-radius:10px}
+.learning-intro{margin:0 0 20px;padding:12px 4px 0}
+.learning-eyebrow{font-size:11px;letter-spacing:.2em;color:var(--rambler-muted);font-weight:700}
+.learning-intro h2{font-size:1.9rem;margin:6px 0 4px;line-height:1.5}
+.learning-intro p{color:var(--rambler-muted);margin:0 0 20px}
+.learning-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.learning-card{display:flex;flex-direction:column;min-width:0;padding:22px 18px;border-radius:16px;background:#e2f0ed;color:#17463f!important;transition:transform .2s ease,box-shadow .2s ease}
+.learning-card:nth-child(2){background:#e6eaf6;color:#35436f!important}
+.learning-card:nth-child(3){background:#fbefdf;color:#745332!important}
+.learning-card:hover{transform:translateY(-4px);box-shadow:0 8px 18px #173c4810}
+.learning-card small{font-size:10px;letter-spacing:.14em;opacity:.65}
+.learning-card strong{font-size:18px;margin:10px 0 5px}
+.learning-card span{font-size:12px;opacity:.8;line-height:1.7}
+.latest-label{font-size:18px;font-weight:650;margin:30px 2px 0}
+[data-theme=dark] body{background:#101b22}
+[data-theme=dark] .learning-card{background:#193c38;color:#b6e7df!important}
+[data-theme=dark] .learning-card:nth-child(2){background:#272f49;color:#c6d1ff!important}
+[data-theme=dark] .learning-card:nth-child(3){background:#413428;color:#f1d2a9!important}
+[data-theme=dark] #page,[data-theme=dark] #post,[data-theme=dark] .card-widget,[data-theme=dark] .recent-post-item{background:#18262e}
+@media(max-width:768px){#nav{padding:0 20px;height:60px}#page-header.full_page{min-height:540px}#site-info::before{font-size:10px;letter-spacing:.18em}#site-info::after{font-size:9px;letter-spacing:.08em}.learning-grid{gap:8px}.learning-card{padding:16px 10px}.learning-card strong{font-size:15px}.learning-card span{font-size:11px}.learning-card small{font-size:8px}.learning-intro h2{font-size:1.6rem}#post{padding:28px 20px!important}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.typed-cursor{display:none}}
+@media(prefers-reduced-motion:reduce){#subtitle{display:none}#site-subtitle::after{content:'记录学习过程，分享技术知识'}}

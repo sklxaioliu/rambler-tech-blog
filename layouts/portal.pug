@@ -1,0 +1,143 @@
+extends includes/layout.pug
+
+block content
+  if page.current > 1
+    include includes/mixins/indexPostUI.pug
+    +indexPostUI
+  else
+    #portal-home
+      .portal-backdrop(aria-hidden='true')
+      .portal-shell
+        nav.portal-nav(aria-label='首页导航')
+          a.portal-brand(href=url_for('/'))
+            span.brand-mark R.
+            span RAMBLER
+              small 个人技术知识库
+          .portal-nav-links
+            a.active(href=url_for('/')) 首页
+            a(href=url_for('/guide/')) 学习路线
+            a(href=url_for('/archives/')) 文章归档
+            a(href=url_for('/about/')) 关于我
+          .portal-nav-tools
+            button.portal-icon(type='button' data-portal-action='search' aria-label='搜索文章' title='搜索文章')
+              i.fas.fa-search
+            button.portal-icon(type='button' data-portal-action='theme' aria-label='切换深浅模式' title='切换深浅模式')
+              i.fas.fa-adjust
+        .portal-columns
+          aside.portal-profile
+            .portal-identity
+              .portal-avatar-wrap
+                img.portal-avatar(src=url_for(theme.avatar.img) alt='Rambler 的个人头像' width='106' height='106')
+                span.portal-online(aria-label='持续记录中')
+              p.portal-kicker HELLO, WORLD!
+              h1 Hi, I'm #[span Rambler]
+              p.portal-bio 一个保持好奇的技术探索者。#[br]在代码与生活之间，慢慢找到答案。
+            section.glass-card.portal-tags
+              h2 About me #[span / 关于我]
+              .portal-tag-cloud
+                span 持续学习
+                span 乐于分享
+                span 理性思考
+                span 偶尔折腾
+                span 热爱技术
+                span 记录日常
+            section.glass-card.portal-map
+              .portal-section-title
+                h2 我的学习宇宙
+                span LEARNING MAP
+              svg(viewBox='0 0 280 152' role='img' aria-label='SQL、Linux、网络与虚拟化相互连接的学习地图')
+                defs
+                  linearGradient#orbit-gradient(x2='1' y2='1')
+                    stop(stop-color='#bba4ff')
+                    stop(offset='1' stop-color='#78ded0')
+                g(fill='none' stroke='currentColor' opacity='.17')
+                  ellipse(cx='140' cy='78' rx='96' ry='48' transform='rotate(-18 140 78)')
+                  ellipse(cx='140' cy='78' rx='96' ry='48' transform='rotate(35 140 78)')
+                  path(d='M43 71 151 32 230 90 116 121Z M43 71 230 90 M151 32 116 121')
+                circle(cx='140' cy='78' r='22' fill='url(#orbit-gradient)' opacity='.85')
+                text(x='140' y='82' text-anchor='middle' fill='#1b2339' font-size='10' font-weight='700') EXPLORE
+                g(fill='currentColor' font-size='11')
+                  circle(cx='43' cy='71' r='4' fill='#a5e4df')
+                  text(x='18' y='58') SQL
+                  circle(cx='151' cy='32' r='4' fill='#c6afff')
+                  text(x='167' y='33') Linux
+                  circle(cx='230' cy='90' r='4' fill='#ebc48f')
+                  text(x='232' y='112') 网络
+                  circle(cx='116' cy='121' r='4' fill='#9db9ff')
+                  text(x='72' y='143') 虚拟化
+              p 把零散的知识，连接成自己的世界。
+            .portal-socials
+              a(href=url_for('/about/') aria-label='关于 Rambler' title='关于我')
+                i.far.fa-user
+              a(href=url_for('/atom.xml') aria-label='RSS 订阅' title='RSS 订阅')
+                i.fas.fa-rss
+              a(href=url_for('/tags/') aria-label='浏览标签' title='标签导航')
+                i.fas.fa-hashtag
+              a(href=url_for('/guide/') aria-label='开始学习' title='开始学习')
+                i.far.fa-compass
+          .portal-dashboard
+            section.portal-welcome
+              .portal-welcome-heading
+                span.portal-status #[span] A LITTLE SPACE ON THE INTERNET
+                .portal-clock
+                  time#portal-time --:--
+                  span#portal-date 正在加载日期
+              h2 把热爱，#[span 写成日常。]
+              p#portal-quote 记录学习过程，分享技术知识
+            section.portal-destinations(aria-labelledby='portal-explore-title')
+              .portal-heading-row
+                h2#portal-explore-title 探索我的知识库 #[span EXPLORE]
+                a(href=url_for('/categories/')) 全部分类 #[i.fas.fa-arrow-right]
+              .portal-card-grid
+                each module, index in site.data.learning
+                  - const count = site.posts.toArray().filter(post => post.categories.toArray().some(cat => cat.name === module.name)).length
+                  a.glass-card.portal-destination(class=module.style href=url_for('/categories/' + module.slug + '/'))
+                    .destination-top
+                      span.destination-icon
+                        i(class=module.icon)
+                      span.destination-number=String(index + 1).padStart(2, '0')
+                    h3=module.name
+                    p=module.description
+                    .destination-bottom
+                      span=count + ' 篇教程 · ' + module.track
+                      i.fas.fa-arrow-up-right-from-square
+                a.glass-card.portal-destination.portal-small(href=url_for('/guide/'))
+                  span.destination-icon #[i.far.fa-compass]
+                  div
+                    h3 从这里开始
+                    p #{site.data.learning.length} 大模块，循序渐进
+                  i.fas.fa-arrow-right
+                a.glass-card.portal-destination.portal-small(href=url_for('/archives/'))
+                  span.destination-icon #[i.fas.fa-box-archive]
+                  div
+                    h3 时光档案
+                    p 每一次记录，都算数
+                  i.fas.fa-arrow-right
+                a.glass-card.portal-destination.portal-small(href=url_for('/tags/'))
+                  span.destination-icon #[i.fas.fa-hashtag]
+                  div
+                    h3 知识碎片
+                    p 用关键词，发现关联
+                  i.fas.fa-arrow-right
+            section.glass-card.portal-notes(aria-labelledby='portal-notes-title')
+              .portal-heading-row
+                h2#portal-notes-title 最近在写 #[span LATEST NOTES]
+                a(href=url_for('/archives/')) 查看全部 #[i.fas.fa-arrow-right]
+              .portal-note-list
+                each post in site.posts.sort('date', -1).limit(3).toArray()
+                  a.portal-note(href=url_for(post.path))
+                    span.note-dot
+                    .note-content
+                      h3=post.title
+                      p=post.description
+                    time(datetime=date_xml(post.date))=date(post.date, 'MM.DD')
+                    i.fas.fa-arrow-right
+            .portal-bottom-row
+              .portal-announcement #[i.fas.fa-bullhorn] #{site.posts.length} 篇教程 · #{site.data.learning.length} 大模块，欢迎带着好奇心来逛逛。
+              a(href=url_for('/guide/')) 开始探索 #[span →]
+        footer.portal-footer
+          span © 2026 Rambler · 记录学习过程，分享技术知识
+          .portal-footer-links
+            span 背景 · 用户提供
+            a(href=url_for('/atom.xml')) RSS
+            span Hexo × Butterfly
