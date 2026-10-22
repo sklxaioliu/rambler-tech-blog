@@ -44,6 +44,7 @@ category_map:
   Word 办公: word
   PPT 演示: ppt
   信用体系建设: credit
+  AI 开发工具: ai-tools
 tag_map:
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss

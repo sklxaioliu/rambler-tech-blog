@@ -56,3 +56,12 @@
   track: 国家政策 / 实务入门
   cover: credit
   posts: [social-credit-system, credit-repair-guide, civilized-city-guide]
+
+- name: AI 开发工具
+  slug: ai-tools
+  icon: fas fa-code
+  style: portal-ai
+  description: 从安装与提问，到项目修改、验证和发布。
+  track: Codex / AI 编程
+  cover: ai-tools
+  posts: [codex-windows-guide]
