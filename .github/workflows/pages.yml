@@ -24,6 +24,15 @@ jobs:
           git add --all
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Expand verified blog source for normal maintenance'
           git push
+      # 网页上传的一次性内容更新；文章已存在时跳过，避免覆盖后续维护。
+      - name: Import verified Codex tutorial update
+        if: hashFiles('source/_posts/codex-windows-guide.md') == '' && hashFiles('codex-tutorial-update.zip') != ''
+        run: |
+          echo 'e42509bb909ea980a4ab64834c84c6a0fe6c5434696d2fa769a07dddc1ef9a5e  codex-tutorial-update.zip' | sha256sum --check
+          unzip -oq codex-tutorial-update.zip
+          git add source/_posts/codex-windows-guide.md source/_data/learning.yml source/img/ai-tools.svg source/guide/index.md _config.yml tools/http-check.cjs
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Publish detailed Codex installation and usage guide'
+          git push
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
@@ -47,3 +56,4 @@ jobs:
       - name: Deploy to Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
