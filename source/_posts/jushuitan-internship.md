@@ -4,94 +4,147 @@ date: 2026-10-23 09:00:00
 updated: 2026-10-23 09:00:00
 categories: [工作经历]
 tags: [聚水潭, 实习, ERP, 实施, 成长记录]
-description: 整理第一段实习中的培训考核、合租生活和工作见闻，记录从学生身份走向职场的适应过程。
+description: 从培训考核到合租生活，记录我在聚水潭的第一段实习，以及从校园走向职场的适应与成长。
 cover: /img/work/jushuitan-day.jpg
+original_url: https://github.com/sklxaioliu/sklxaioliu.github.io/blob/main/2021/08/19/jushuitan/index.html
 ---
 
 ## 写在前面
 
-聚水潭，是我实习的第一站。回头再看这段经历，印象最深的并不只是接触了什么软件，还有第一次面对工作要求时的紧张、下班后的生活，以及离开熟悉环境后一点点建立起来的节奏。
+聚水潭，是我实习的第一站。
 
-这篇文章根据我旧博客中 2021 年 8 月 19 日发布的记录重新整理。保留当时的经历与感受，补充必要的概念解释，让没有接触过 ERP 和实施工作的人也能读懂。文中的公司环境、考核和作息均属于当时的个人记录，不代表企业目前的制度。
+第一次从校园走进工作环境，很多东西都带着新鲜感：白天和夜晚的园区、培训教室里的投影、电脑前的同事，还有下班以后慢慢熟悉起来的街道。与此同时，新的知识和考核也带来了压力。工作与生活一起向前推着我，让我开始学习怎样在陌生环境里站稳脚步。
 
-![旧博客保存的聚水潭园区白天照片](/img/work/jushuitan-day.jpg)
+这段日子里，有紧绷着神经准备考试的时候，也有回到住处、看一眼窗外黄昏的时候。如今想起它，脑海里出现的是这些具体的画面。
 
-## 第一站：先认识 ERP，再适应工作
+## 第一站：认识电商 ERP
 
-我在这段实习中开始接触电商 ERP。旧文提到了订单管理、仓储管理、分销管理和供应链协同这些业务方向。对于刚进入职场的人来说，这些名词起初很容易混在一起：看起来都是系统里的功能，实际对应的却是不同岗位每天要做的事情。
+在聚水潭，我开始接触电商 ERP，了解订单管理、仓储管理、分销管理和供应链协同。刚开始学习时，这些词看起来像一组软件功能，慢慢把它们放进业务流程里，才更容易理解各自的作用。
 
-ERP 可以先理解为帮助企业把相关业务信息组织起来的系统。以下用一个简化例子解释，不是对聚水潭具体版本界面的操作说明：
+用一笔普通订单来理解：顾客买了两个水杯，商家需要确认商品和数量，仓库需要根据订单拣货、复核，再安排发出。订单、库存和仓库操作之间，信息需要衔接起来。少了其中一个环节，就要花更多时间核对和沟通。
 
-一家店铺卖水杯。顾客下单后，需要确认买了什么、仓库有没有货、谁负责拣货，以及是否已经发出。如果订单信息和仓库信息各记各的，就容易出现“顾客已经买了，仓库却说没货”的情况。把相关信息连起来，才能减少反复沟通和手工核对。
+这个例子也让我更容易理解实施工作的方向：熟悉软件只是开始，还要知道一个功能解决什么问题、操作前后会影响什么。按钮和菜单背后，连接的是实际工作中的人和事。
 
-| 业务环节 | 用水杯订单举例 | 初学者可以先想清楚的问题 |
-| --- | --- | --- |
-| 订单 | 顾客购买两个白色水杯 | 买的是哪种商品，数量是否清楚？ |
-| 库存 | 仓库还有多少白色水杯 | 数量从哪里来，什么时候发生变化？ |
-| 仓储 | 根据订单拣货、复核和发货 | 实物与单据是否一致？ |
-| 协同 | 不同角色查看相关业务信息 | 上一个环节的信息能否传到下一个环节？ |
+从学生到实习生，我需要适应的不只是新的知识，还有新的要求。学习不能停在记住名称，还要努力把内容理解清楚，面对考核时能够拿出掌握它的结果。
 
-这些例子帮助我重新理解当时的学习方向：实施工作离不开软件，也离不开真实业务。至于我在这一阶段具体完成过哪些客户项目，旧记录没有写明，因此这里不补写客户交付、实施成果或业绩数字。
+## 培训与考核：紧张，也是开始成长的地方
 
-## 培训与考核：最紧绷的一段时间
+“只有学习的人才不会被淘汰。”这句话很能概括我当时的心情。
 
-旧文里，我写过一句话：“只有学习的人才不会被淘汰。”它背后是当时很直接的压力：能不能留下来，需要经过多次考试。按照当时我的记录，三次没有通过会面临淘汰，因此那段时间一直绷着一根弦。
+实习期间需要参加多次考试，三次没有通过就会面临淘汰。那段时间，我一直绷着一根弦。能不能留下来，是一个很现实的问题，也让我真切地感受到，工作环境里的学习有它自己的节奏和压力。
 
-这不是在介绍今天的公司招聘规则，而是在回顾当时自己的状态。从校园到工作环境，最明显的变化之一，就是学习不再只是“看过了没有”，还要面对是否真正掌握、能否满足要求的问题。
+培训教室、围坐在一起的伙伴、桌上的电脑，构成了这一阶段很深的记忆。进入一个新环境，身边的人和自己一样，都在接触新内容、面对新的要求。这样的场景，让学习不再只是一件发生在校园里的事。
 
-比如，记住一个功能名称，只能说明见过这个词；能够说出它解决什么问题、前后关联哪些信息，理解才会更扎实。这个区别对今天学习任何软件也有帮助。
+回头看，压力最容易让人只盯着结果，但真正需要解决的，仍然是一个个具体的问题：哪个概念还没理解，哪个流程容易混淆，哪一部分还不能讲清楚。把问题拆小，才更容易找到继续往前走的方法。
 
-把这段经历整理成现在可以使用的方法，我会建议初入职场的自己做一张复习表：
+## 和室友一起安顿生活
 
-| 学习内容 | 不只记名称，还要补充什么 |
-| --- | --- |
-| 一个功能 | 它解决什么业务问题？ |
-| 一项操作 | 操作前应具备什么条件？ |
-| 一个结果 | 怎样确认结果符合预期？ |
-| 一次错误 | 现象是什么，后来怎样理解？ |
+工作之外，我和室友合租了一套房子。房子的环境不错，租金也不便宜。客厅、卧室、厨房和洗漱区，组成了那段时间的日常生活空间。
 
-这张表是整理旧经历时补充的学习建议，不是当时已经使用过的内部培训材料。它的价值在于把“我好像懂了”，变成可以自己检验的问题。
+我们住在 23 楼，窗外的视野很开阔。白天能看见一片片住宅和远处的城市轮廓，到了傍晚，天空又会变成另一种颜色。我还拍下过公寓窗外的黄昏：楼宇暗下来，晚霞留在天边，和白天紧张的工作节奏很不一样。
 
-## 合租与黄昏：工作之外，也要学会安顿自己
+这些生活细节，同样属于我的第一段实习。走出校园以后，需要学习的不只是在公司里怎样完成要求，也包括怎样安排住处、适应共同生活、照顾自己的日常。
 
-那时，我和室友合租了一套房子。旧文里记得很清楚：环境不错，租金也不便宜，住在 23 楼，可以看到开阔的景色，还拍下了公寓里的黄昏。
+有一个能休息的地方，有可以一起相处的室友，新环境也就有了逐渐熟悉起来的基础。
 
-这些看起来与技术无关的细节，其实也是第一段实习的重要组成部分。离开学校后，住在哪里、怎样安排日常开支、如何与室友共同生活，都会影响一个人的工作状态。
+## 公司里的工作与休息空间
 
-为了把这段记录讲得更具体，可以做一个不涉及真实支出的预算示例：假设每月可支配金额为 4,000 元，住房与水电共 1,500 元，餐饮 1,000 元，交通与日用品 400 元，那么还剩 1,100 元用于储蓄和其他开支。这里的数字只是帮助理解预算的假设值，不是我当时的工资或实际花费。
+当时，公司一、二楼是工作的地方，三楼有台球室、游戏室和健身器材。我拍下过工位、公共交流区、窗边的座位和台球桌。
 
-对初次异地实习的人来说，先把生活安顿好，并不比学习软件次要。稳定的住处、合适的通勤和基本的收支记录，都会让人更有余力面对新工作。
+一张张照片，把环境里的不同侧面保留下来：有人在电脑前工作，有桌椅供人停留交流，也有可以活动放松的空间。初到职场时，这些都带着新鲜感。
 
-## 公司环境与下班后的生活
+那时实行八小时工作安排，加班有相应报酬，工作之外也有时间去感受生活。紧张的培训和考核之余，看看周围的街景、吃一顿饭、和室友相处，给这段经历留下了更多不同的颜色。
 
-我在旧文中拍过公司内部的部分环境，也记录了工作区域、台球室、游戏室和健身器材。这些照片承载了初到职场时的新鲜感。这里不搬运培训画面或内部工作细节，把重点放在当时的生活体验上。
+## 从湖南口味，到慢慢习惯浙江饮食
 
-关于作息，我当时记录的是八小时工作安排，加班会有相应报酬，也因此能够在工作之外保留一些感受生活的时间。这只是对那一阶段个人经历的回顾，不能据此推断现在所有岗位和地区的安排。
+作为湖南人，刚开始接触浙江的饮食时，我总觉得少了熟悉的辣味。吃饭这件平常事，也成了适应新环境的一部分。
 
-下班后的生活，让这段实习不只是考试和压力。散步、看看周围的环境、和室友相处，都是从学生身份慢慢进入社会生活的过程。
+过了一段时间，口味慢慢习惯了，觉得也还不错。相册里留着不少吃饭的照片：一碗热汤里的主食、一桌一起分享的菜，还有热盘上冒着烟气的饭菜。
 
-## 从湖南口味到浙江饮食
+它们没有复杂的故事，却让我记得，那些日子并不只有工作。每天吃什么、和谁一起吃饭，也会成为一段生活里很具体的记忆。
 
-旧文还专门写到了吃饭。作为湖南人，刚开始接触当地饮食时，总觉得少了一点熟悉的辣味；适应一段时间后，也逐渐觉得不错。
+## 工作之外，看看身边的风景
 
-这件小事很能代表当时的状态：刚到一个新环境，很多地方都不习惯，但不习惯并不等于无法适应。工作知识需要学习，生活方式也需要一点时间调整。
+我还拍过暮色里的街道、亮起的路灯、树荫下的老建筑和临水的街巷。
 
-与其急着要求自己立刻融入，不如先解决每天最具体的问题：吃得是否合适，休息是否足够，今天还有哪一项内容没有理解。把这些小事一件件处理好，新环境就会慢慢变得熟悉。
+这些画面和园区、教室、工位放在一起，才是完整的实习生活。走在街上，注意到天色和树影，给日常留下一张照片，也是在慢慢认识自己生活的地方。
 
-## 这段经历留给我的几点理解
+从最初的陌生到逐渐习惯，变化经常发生在这些小事里。工作知识需要积累，生活里的适应也需要时间。
 
-第一，实施工作的起点，是愿意理解系统背后的业务。订单、库存和仓储不是孤立的名词，只有把它们放进一个真实场景，才容易理解为什么要有这些功能。
+## 回望这段经历
 
-第二，面对考核时，焦虑很真实，但学习仍然需要落到具体问题上。哪里不懂、哪里混淆、哪里不能解释，比单纯告诉自己“再努力一点”更有用。
+聚水潭让我第一次感受到职场里的学习压力，也让我开始理解，适应工作和安顿生活是同时发生的。
 
-第三，职业适应和生活适应是同时发生的。租房、饮食、作息，看似琐碎，却共同构成了一段工作经历。第一份实习的意义，也许就在于开始学着同时照顾好工作和生活。
+这段经历留给我的，有准备考核时的紧张，有接触业务知识时的陌生，也有与室友合租、适应饮食、记录风景的日常。它们共同组成了我从校园走向职场的第一站。
 
-## 从第一站，走向下一段经历
+带着这一站的经历，我又进入优层智能，开始接触工业现场的系统实施。下一篇：[优层智能实习回顾：在工业视觉现场学习系统实施](/posts/youceng-industrial-vision/)。
 
-聚水潭这段实习，让我第一次近距离感受到工作环境中的学习压力，也留下了合租、黄昏、美食和日常生活的记忆。它不是一份成果清单，而是我从校园走向职场的起点。
+<!-- work-gallery:start -->
 
-下一段实习，我进入优层智能，开始面对更具体的工业现场与系统实施任务。继续阅读：[优层智能实习回顾：在工业视觉现场学习系统实施](/posts/youceng-industrial-vision/)。
+## 那些日子里的照片
 
-## 原始记录
+把这段时间的 30 张照片放在一起，记录工作现场，也记录生活。每张照片下方附有说明，点击图片可以放大查看。
 
-本文整理自 [旧博客仓库](https://github.com/sklxaioliu/sklxaioliu.github.io)中的 [聚水潭原文](https://github.com/sklxaioliu/sklxaioliu.github.io/blob/main/2021/08/19/jushuitan/index.html)。配图沿用旧博客的公开照片；概念示例与复盘建议为本次整理补充，没有作为已经发生的项目经历陈述。
+### 园区的白天与夜晚
+
+<div class="work-photo-grid">
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-01.jpg" alt="白天的园区入口" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>01 / 白天的园区入口</strong><span>聚水潭园区的白天。入口的标识与门岗，是实习第一站熟悉的日常。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-02.jpg" alt="夜晚的同一处入口" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>02 / 夜晚的同一处入口</strong><span>夜晚的园区入口亮起灯光，同一个地方，白天和夜晚有着不同的样子。</span></figcaption></figure>
+</div>
+
+### 合租住处与窗外风景
+
+<div class="work-photo-grid">
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-03.jpg" alt="合租客厅" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>03 / 合租客厅</strong><span>我和室友合租的客厅，沙发、茶几和餐桌组成了下班后的生活空间。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-04.jpg" alt="卧室一角" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>04 / 卧室一角</strong><span>卧室里的床、衣柜与窗帘，记录了刚到新环境时的居住条件。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-05.jpg" alt="另一间卧室" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>05 / 另一间卧室</strong><span>从房门口看向窗边，留下住处另一个房间的样子。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-06.jpg" alt="房间之间的过道" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>06 / 房间之间的过道</strong><span>连接卧室与卫生间的过道，是合租房里每天走过的地方。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-07.jpg" alt="卫生间与洗漱区" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>07 / 卫生间与洗漱区</strong><span>淋浴隔断、洗手台和镜柜，留下住处洗漱区的模样。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-08.jpg" alt="厨房" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>08 / 厨房</strong><span>厨房里的灶台、操作台和窗户，把共同生活的细节留在照片中。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-09.jpg" alt="高处看到的城市" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>09 / 高处看到的城市</strong><span>住在 23 楼，窗外可以看到成片住宅和远处的城市轮廓。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-10.jpg" alt="公寓窗外的黄昏" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>10 / 公寓窗外的黄昏</strong><span>公寓窗外的黄昏，楼宇逐渐暗下来，天空还留着晚霞。</span></figcaption></figure>
+</div>
+
+### 培训与学习
+
+<div class="work-photo-grid">
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-11.jpg" alt="围坐学习的现场" width="720" height="960" loading="lazy" decoding="async"><figcaption><strong>11 / 围坐学习的现场</strong><span>培训时，大家围桌使用电脑、交流学习，这是我接触新知识时的一个片段。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-12.jpg" alt="培训教室" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>12 / 培训教室</strong><span>培训教室里的投影和课桌，画面记录了客户售后业务流程相关课程。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-13.jpg" alt="讲座中的一刻" width="720" height="960" loading="lazy" decoding="async"><figcaption><strong>13 / 讲座中的一刻</strong><span>讲座中的一刻，大家面向投影听讲，课件上的主题是心理健康。</span></figcaption></figure>
+</div>
+
+### 公司环境与休息空间
+
+<div class="work-photo-grid">
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-14.jpg" alt="公共交流区" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>14 / 公共交流区</strong><span>公司的公共交流区，桌椅与走道让工作环境多了一些开放的空间。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-15.jpg" alt="公共区域的另一个视角" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>15 / 公共区域的另一个视角</strong><span>从另一个角度看公共区域，座椅与绿植也留在了记忆里。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-16.jpg" alt="窗边座位" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>16 / 窗边座位</strong><span>窗边的长桌和沙发座位，是办公环境中一个可以停留的角落。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-17.jpg" alt="办公区一角" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>17 / 办公区一角</strong><span>办公区里的工位、显示器和同事，记录着当时日常工作的样子。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-18.jpg" alt="台球桌" width="720" height="960" loading="lazy" decoding="async"><figcaption><strong>18 / 台球桌</strong><span>休息空间里的台球桌，工作之外，也有活动和放松的地方。</span></figcaption></figure>
+</div>
+
+### 饮食与口味适应
+
+<div class="work-photo-grid">
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-19.jpg" alt="一起吃饭" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>19 / 一起吃饭</strong><span>和伙伴一起吃饭，一桌饭菜也是实习生活里的重要记忆。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-20.jpg" alt="一碗热食" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>20 / 一碗热食</strong><span>一碗热食里有鸡蛋、主食和配料，留下平常一餐的样子。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-21.jpg" alt="带着辣味的一餐" width="720" height="960" loading="lazy" decoding="async"><figcaption><strong>21 / 带着辣味的一餐</strong><span>红汤与配料，让这顿饭多了些熟悉的辣味。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-22.jpg" alt="另一碗面食" width="720" height="960" loading="lazy" decoding="async"><figcaption><strong>22 / 另一碗面食</strong><span>黄色勺子放在汤碗里，又是实习期间的一次日常用餐。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-23.jpg" alt="热盘里的饭菜" width="720" height="960" loading="lazy" decoding="async"><figcaption><strong>23 / 热盘里的饭菜</strong><span>热盘上摆着饭菜，工作之外的生活，也有这些具体的味道。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-24.jpg" alt="围桌分享的菜肴" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>24 / 围桌分享的菜肴</strong><span>围桌分享的一锅菜，和工作、学习一起组成了那段日子。</span></figcaption></figure>
+</div>
+
+### 闲暇时光与街巷
+
+<div class="work-photo-grid">
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-25.jpg" alt="天色渐暗的街头" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>25 / 天色渐暗的街头</strong><span>天色渐暗，街边的建筑亮起灯，记录工作之外走走看看的片段。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-26.jpg" alt="路灯亮起的傍晚" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>26 / 路灯亮起的傍晚</strong><span>傍晚的路灯已经亮起，天边还留着最后的余光。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-27.jpg" alt="树影与老建筑" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>27 / 树影与老建筑</strong><span>树木与沿街建筑相映，给路过的街巷留下一张照片。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-28.jpg" alt="阳光穿过树叶" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>28 / 阳光穿过树叶</strong><span>阳光穿过树叶，落在围栏与屋舍之间，生活也有安静的一面。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-30.jpg" alt="石板路上的日光" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>29 / 石板路上的日光</strong><span>石板路上的日光与树影，留下街巷里平常的一刻。</span></figcaption></figure>
+<figure class="work-photo"><img src="/img/work/gallery/jushuitan-31.jpg" alt="临水的街巷" width="960" height="720" loading="lazy" decoding="async"><figcaption><strong>30 / 临水的街巷</strong><span>水道、栏杆与临水建筑，成为这段实习生活相册里的另一幅风景。</span></figcaption></figure>
+</div>
+
+<!-- work-gallery:end -->
+
+

@@ -27,7 +27,7 @@ for (const m of modules) for (const slug of m.posts) assert.ok(posts.includes(sl
 for (const file of posts) {
   const md = fs.readFileSync(path.join(root, 'source/_posts', file), 'utf8');
   const experienceArticle = /categories: \[工作经历\]/.test(md);
-  const sections = experienceArticle ? ['写在前面', '原始记录'] : ['先用一个例子理解', '练习与参考答案', '学习目标', '基础知识', '操作步骤', '实际应用', '常见问题', '知识总结', '下一篇教程'];
+  const sections = experienceArticle ? ['写在前面', '回望这段经历'] : ['先用一个例子理解', '练习与参考答案', '学习目标', '基础知识', '操作步骤', '实际应用', '常见问题', '知识总结', '下一篇教程'];
   for (const section of sections) {
     assert.ok(md.includes('## ' + section), `${file} 缺少 ${section}`);
   }
@@ -53,6 +53,23 @@ for (const module of modules) {
   assert.equal(count, module.posts.length, module.name + ' 分页文章数不符');
 }
 const search = fs.readFileSync(path.join(pub, 'search.xml'), 'utf8');
+// 相册独立核对顺序、可用文件、尺寸和逐图说明；缺失原图用文字卡片，不生成死链接。
+const galleryPath = path.join(root, 'source/_data/work-galleries.json');
+if (fs.existsSync(galleryPath)) {
+  const galleries = JSON.parse(fs.readFileSync(galleryPath, 'utf8'));
+  for (const gallery of galleries) {
+    assert.equal(gallery.photos.length, gallery.expected, gallery.key + ' 原文图片位置遗漏');
+    const html = fs.readFileSync(path.join(pub, 'posts', gallery.post, 'index.html'), 'utf8');
+    assert.equal((html.match(/class="work-photo(?: work-photo-missing)?"/g) || []).length, gallery.expected, gallery.key + ' 相册卡片数不符');
+    for (const photo of gallery.photos) {
+      assert.ok(photo.caption && photo.title, gallery.key + ' 缺少图片说明');
+      assert.ok(html.includes(photo.title), gallery.key + ' 图片标题没有发布');
+      if (photo.missing) { assert.equal(photo.src, null); continue; }
+      assert.ok(photo.width > 0 && photo.height > 0 && Math.max(photo.width,photo.height) <= 1600, photo.file + ' 尺寸异常');
+      assert.ok(fs.existsSync(path.join(pub,photo.src)), photo.file + ' 照片文件未发布');
+    }
+  }
+}
 assert.equal((search.match(/<entry>/g) || []).length, posts.length, '搜索索引数量错误');
 for (const file of ['atom.xml', 'sitemap.xml', '404.html', 'guide/index.html', 'about/index.html']) assert.ok(fs.existsSync(path.join(pub, file)));
 let checked = 0;

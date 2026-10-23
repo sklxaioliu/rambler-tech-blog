@@ -94,3 +94,13 @@ body:not(:has(#portal-home)) .tag-cloud-list a{border:1px solid #c3a4e531;backgr
 @media(max-width:1000px){body:not(:has(#portal-home)) #post{padding:30px}.lesson-grid.article-sort{grid-template-columns:1fr}.lesson-card-bottom{font-size:9px}}
 @media(max-width:768px){body:not(:has(#portal-home)) #content-inner{padding:0 13px 25px}body:not(:has(#portal-home)) #page-header.not-home-page{height:245px}body:not(:has(#portal-home)) #page-header.post-bg{height:285px}body:not(:has(#portal-home)) #page-site-info{top:125px}body:not(:has(#portal-home)) #page-site-info::before{font-size:8px;letter-spacing:.15em}body:not(:has(#portal-home)) #post-info{bottom:30px}body:not(:has(#portal-home)) #post-info .post-title{font-size:23px;line-height:1.6}body:not(:has(#portal-home)) #post{padding:25px 20px!important}body:not(:has(#portal-home)) #article-container{font-size:15px;line-height:2}body:not(:has(#portal-home)) #article-container h2{font-size:21px}body:not(:has(#portal-home)) #article-container h3{font-size:18px}.study-collection{padding:24px 18px!important}.lesson-card h3{font-size:16px}.collection-intro h2{font-size:25px}.collection-links{font-size:10px}.lesson-grid.article-sort{gap:13px}body:not(:has(#portal-home)) .category-list{grid-template-columns:1fr}body:not(:has(#portal-home)) #nav{padding:0 18px}body:not(:has(#portal-home)) #aside-content #card-toc{background:#211c34f5!important}}
 @media(prefers-reduced-motion:reduce){.lesson-card:hover{transform:none}}
+
+/* 工作相册：原比例展示，逐图说明；移动端单列，支持主题图片放大。 */
+#article-container .work-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:25px 0 38px;align-items:start}
+#article-container .work-photo{margin:0;border:1px solid #c7a9e52e;border-radius:16px;overflow:hidden;background:rgba(112,91,142,.09)}
+#article-container .work-photo img{display:block;width:100%;height:auto;max-height:390px;object-fit:contain;margin:0;background:rgba(14,16,30,.25);cursor:zoom-in}
+#article-container .work-photo figcaption{padding:17px 18px;font-size:13px;line-height:1.85;text-align:left}
+#article-container .work-photo figcaption strong{display:block;font-size:14px;margin-bottom:7px;color:var(--font-color)}
+#article-container .work-photo figcaption span{display:block;opacity:.85}
+#article-container .work-photo-placeholder{padding:65px 20px;text-align:center;border-bottom:1px dashed #c7a9e52e;color:var(--font-color);opacity:.7;letter-spacing:.1em}
+@media(max-width:700px){#article-container .work-photo-grid{grid-template-columns:1fr;gap:18px}#article-container .work-photo img{max-height:520px}#article-container .work-photo figcaption{padding:15px 17px}}
