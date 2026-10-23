@@ -1,5 +1,14 @@
 # 素材来源
 
+## 工作经历配图（2026-10-23）
+
+用户要求将其公开旧博客的聚水潭、优层智能模块整理并发布。选用原文公开的两张外景照片，原样复制，保留来源：
+
+- `source/img/work/jushuitan-day.jpg` ← `sklxaioliu/sklxaioliu.github.io` 的 `images/jushuitanday.jpg`。
+- `source/img/work/youceng-site.jpg` ← 同仓库 `images/yc4.jpg`。
+
+只迁移上述外景，不迁移培训资料、客户系统界面或生产记录。`source/img/work-experience.svg` 为本项目新增原创栏目图。
+
 ## 当前个人头像
 
 用户于 2026-10-21 提供黑白人物照片，原文件名 `codex-clipboard-4b296d72-5e77-44fe-9769-cabd8e81d72b.jpg`，已复制至 `source/img/avatar.jpg`。首页和主题侧栏统一读取 `_config.butterfly.yml` 的 `avatar.img`；圆形显示通过 CSS 实现，未修改图片文件内容。该照片不属于本项目原创素材。

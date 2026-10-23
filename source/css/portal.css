@@ -121,3 +121,4 @@ body:has(#portal-home) #body-wrap{min-height:100vh}
 
 /* 信用建设栏目沿用首页卡片体系。 */
 .portal-credit .destination-icon{color:#dcc4ff;background:#b798e520;border-color:#cfb2f22b}
+.portal-work .destination-icon{color:#f1cfb9;background:#cfab8c20;border-color:#f1cfb92b}

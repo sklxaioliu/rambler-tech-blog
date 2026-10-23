@@ -99,7 +99,7 @@ block content
                     h3=module.name
                     p=module.description
                     .destination-bottom
-                      span=count + ' 篇教程 · ' + module.track
+                      span=count + ' 篇文章 · ' + module.track
                       i.fas.fa-arrow-up-right-from-square
                 a.glass-card.portal-destination.portal-small(href=url_for('/guide/'))
                   span.destination-icon #[i.far.fa-compass]
@@ -133,7 +133,7 @@ block content
                     time(datetime=date_xml(post.date))=date(post.date, 'MM.DD')
                     i.fas.fa-arrow-right
             .portal-bottom-row
-              .portal-announcement #[i.fas.fa-bullhorn] #{site.posts.length} 篇教程 · #{site.data.learning.length} 大模块，欢迎带着好奇心来逛逛。
+              .portal-announcement #[i.fas.fa-bullhorn] #{site.posts.length} 篇文章 · #{site.data.learning.length} 大模块，欢迎带着好奇心来逛逛。
               a(href=url_for('/guide/')) 开始探索 #[span →]
         footer.portal-footer
           span © 2026 Rambler · 记录学习过程，分享技术知识

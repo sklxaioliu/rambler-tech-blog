@@ -26,18 +26,21 @@ assert.equal(posts.length, expectedPosts, '文章数与学习路线不一致');
 for (const m of modules) for (const slug of m.posts) assert.ok(posts.includes(slug + '.md'), '缺少路线文章 ' + slug);
 for (const file of posts) {
   const md = fs.readFileSync(path.join(root, 'source/_posts', file), 'utf8');
-  for (const section of ['先用一个例子理解', '练习与参考答案', '学习目标', '基础知识', '操作步骤', '实际应用', '常见问题', '知识总结', '下一篇教程']) {
+  const experienceArticle = /categories: \[工作经历\]/.test(md);
+  const sections = experienceArticle ? ['写在前面', '原始记录'] : ['先用一个例子理解', '练习与参考答案', '学习目标', '基础知识', '操作步骤', '实际应用', '常见问题', '知识总结', '下一篇教程'];
+  for (const section of sections) {
     assert.ok(md.includes('## ' + section), `${file} 缺少 ${section}`);
   }
   const policyArticle = /categories: \[信用体系建设\]/.test(md);
-  if (!policyArticle) assert.ok(md.includes('```'), `${file} 缺少代码示例`);
+  if (experienceArticle) assert.ok(md.includes('github.com/sklxaioliu/sklxaioliu.github.io') && md.includes('/img/work/'), `${file} 缺少原始记录来源或经历配图`);
+  else if (!policyArticle) assert.ok(md.includes('```'), `${file} 缺少代码示例`);
   else assert.ok(md.includes('## 官方依据') && md.includes('/img/policy/'), `${file} 缺少依据或配图`);
   assert.ok(md.length > 1300, `${file} 内容过短`);
   const htmlPath = path.join(pub, 'posts', file.replace(/\.md$/, ''), 'index.html');
   assert.ok(fs.existsSync(htmlPath), `${file} 没有生成网页`);
   const html = fs.readFileSync(htmlPath, 'utf8');
   assert.ok(html.includes('id="card-toc"'), `${file} 缺少目录`);
-  if (!policyArticle) assert.ok(html.includes('figure class="highlight'), `${file} 缺少高亮代码`);
+  if (!policyArticle && !experienceArticle) assert.ok(html.includes('figure class="highlight'), `${file} 缺少高亮代码`);
   assert.ok(html.includes('rel="canonical"'), `${file} 缺少 canonical`);
 }
 for (const module of modules) {

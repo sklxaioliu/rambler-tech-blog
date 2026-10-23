@@ -65,3 +65,12 @@
   track: Codex / AI 编程
   cover: ai-tools
   posts: [codex-windows-guide]
+
+- name: 工作经历
+  slug: work-experience
+  icon: fas fa-briefcase
+  style: portal-work
+  description: 从第一段实习，到工业现场实施，记录工作与成长。
+  track: 实习回顾 / 现场实施
+  cover: work-experience
+  posts: [jushuitan-internship, youceng-industrial-vision]
