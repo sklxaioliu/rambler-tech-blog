@@ -33,6 +33,14 @@ jobs:
           git add source/_posts/codex-windows-guide.md source/_data/learning.yml source/img/ai-tools.svg source/guide/index.md _config.yml tools/http-check.cjs
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Publish detailed Codex installation and usage guide'
           git push
+      - name: Import verified work experience articles
+        if: (hashFiles('source/_posts/jushuitan-internship.md') == '' || hashFiles('source/_posts/youceng-industrial-vision.md') == '') && hashFiles('work-experience-update.zip') != ''
+        run: |
+          echo 'c7edb5176057973ba8baa081b0402018362fd03a0317cd0cc2dbcd8cb942aaf2  work-experience-update.zip' | sha256sum --check
+          unzip -oq work-experience-update.zip
+          git add source/_posts/jushuitan-internship.md source/_posts/youceng-industrial-vision.md source/_data/learning.yml source/img/work-experience.svg source/img/work/jushuitan-day.jpg source/img/work/youceng-site.jpg source/guide/index.md _config.yml tools/verify.cjs tools/update-learning.cjs source/css/portal.css layouts/portal.pug docs/ASSETS.md docs/WORK-EXPERIENCE-2026-10-23.md
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Publish Jushuitan and Youceng work experience articles'
+          git push
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
