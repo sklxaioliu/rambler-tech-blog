@@ -41,6 +41,17 @@ jobs:
           git add source/_posts/jushuitan-internship.md source/_posts/youceng-industrial-vision.md source/_data/learning.yml source/img/work-experience.svg source/img/work/jushuitan-day.jpg source/img/work/youceng-site.jpg source/guide/index.md _config.yml tools/verify.cjs tools/update-learning.cjs source/css/portal.css layouts/portal.pug docs/ASSETS.md docs/WORK-EXPERIENCE-2026-10-23.md
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Publish Jushuitan and Youceng work experience articles'
           git push
+      - name: Import complete work photo galleries
+        if: hashFiles('docs/WORK-PHOTO-GALLERY-2026-10-23.md') == '' && hashFiles('work-gallery-update.zip') != ''
+        run: |
+          echo '224ecd8adf6f02629a4057a5ae88fb89d85aab85783723fa1cf9db8bdf997414  work-gallery-update.zip' | sha256sum --check
+          unzip -oq work-gallery-update.zip
+          python3 -m venv /tmp/rambler-photo-import
+          /tmp/rambler-photo-import/bin/pip --disable-pip-version-check install 'Pillow==12.3.0'
+          /tmp/rambler-photo-import/bin/python tools/import-work-photos.py
+          git add source/_posts/jushuitan-internship.md source/_posts/youceng-industrial-vision.md source/_data/work-galleries.json source/img/work/gallery source/css/interior.css tools/verify.cjs tools/update-work-galleries.cjs tools/import-work-photos.py docs/ASSETS.md docs/WORK-EXPERIENCE-2026-10-23.md docs/WORK-PHOTO-GALLERY-2026-10-23.md
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Restore 49 work photos with individual captions'
+          git push
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
