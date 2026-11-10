@@ -52,6 +52,14 @@ jobs:
           git add source/_posts/jushuitan-internship.md source/_posts/youceng-industrial-vision.md source/_data/work-galleries.json source/img/work/gallery source/css/interior.css tools/verify.cjs tools/update-work-galleries.cjs tools/import-work-photos.py docs/ASSETS.md docs/WORK-EXPERIENCE-2026-10-23.md docs/WORK-PHOTO-GALLERY-2026-10-23.md
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Restore 49 work photos with individual captions'
           git push
+      - name: Import Changsha career article
+        if: hashFiles('source/_posts/changsha-credit-platform-career.md') == '' && hashFiles('changsha-career-update.zip') != ''
+        run: |
+          echo '4cff97b2c05770145acbbb6a07347e9077ed36c60357c9bc46e74d8a3a1d66f8  changsha-career-update.zip' | sha256sum --check
+          unzip -oq changsha-career-update.zip
+          git add source/_posts/changsha-credit-platform-career.md source/_data/learning.yml source/_data/work-galleries.json source/guide/index.md source/img/work/changsha tools/verify.cjs tools/import-work-photos.py docs/ASSETS.md docs/CHANGSHA-WORK-2026-11-10.md
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Publish Changsha credit platform career article and 14 photos'
+          git push
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
