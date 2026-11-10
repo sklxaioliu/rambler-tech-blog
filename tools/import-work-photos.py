@@ -23,7 +23,8 @@ def main():
     parser.add_argument("--source-dir", type=Path)
     args = parser.parse_args()
     galleries = json.loads((ROOT / "source/_data/work-galleries.json").read_text(encoding="utf-8"))
-    photos = [photo for gallery in galleries for photo in gallery["photos"] if not photo["missing"]]
+    # 作者后来提供的 Word 配图已随文章提交，不属于旧公开仓库的恢复范围。
+    photos = [photo for gallery in galleries if gallery.get("source_type") != "author_document" for photo in gallery["photos"] if not photo["missing"]]
 
     def restore(photo):
         if args.source_dir:

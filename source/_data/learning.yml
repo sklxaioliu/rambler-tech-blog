@@ -70,7 +70,7 @@
   slug: work-experience
   icon: fas fa-briefcase
   style: portal-work
-  description: 从第一段实习，到工业现场实施，记录工作与成长。
-  track: 实习回顾 / 现场实施
+  description: 从实习到正式工作，记录项目、生活与职业成长。
+  track: 实习回顾 / 职业成长
   cover: work-experience
-  posts: [jushuitan-internship, youceng-industrial-vision]
+  posts: [jushuitan-internship, youceng-industrial-vision, changsha-credit-platform-career]

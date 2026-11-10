@@ -749,5 +749,183 @@
       }
     ],
     "originalExpected": 19
+  },
+  {
+    "key": "changsha",
+    "post": "changsha-credit-platform-career",
+    "expected": 14,
+    "source_type": "author_document",
+    "source_document": "工作.docx",
+    "sourceDocumentSha256": "ef3fe6b9dfee3ef14efae53db441b8446aede7c87ff6961ac831352412144f0a",
+    "photos": [
+      {
+        "index": 1,
+        "file": "image1.jpeg",
+        "group": "第一次走进大型会场",
+        "title": "湖南大数据交易所",
+        "caption": "第一次参加大型会议来到湖南大数据交易所，门口的建筑与标识，留下这段经历的起点。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-01.jpg",
+        "width": 1259,
+        "height": 944,
+        "sourceSha256": "cf86990063f792d569ed85affc1209129cd98082baa8220ec12021f668d8cc34"
+      },
+      {
+        "index": 2,
+        "file": "image2.jpeg",
+        "group": "第一次走进大型会场",
+        "title": "大会现场的展示区域",
+        "caption": "会场里的展示区域，让我感受到企业融资服务与平台建设之间的联系。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-02.jpg",
+        "width": 1264,
+        "height": 948,
+        "sourceSha256": "c80eaf79f026a5522ff51d6305dadd295c5f2927d45e38b5af9b8316a228d401"
+      },
+      {
+        "index": 3,
+        "file": "image3.jpeg",
+        "group": "湘江新区的培训与交流",
+        "title": "湘江新区培训会议",
+        "caption": "在湘江新区的信用建设培训暨“信易贷”工作推广交流大会上，介绍平台规划与相关业务。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-03.jpg",
+        "width": 1267,
+        "height": 845,
+        "sourceSha256": "0c62990a82ce2101e0a58ca5dc044224e84b84619a7a2cc5b95e135bc288cfb0"
+      },
+      {
+        "index": 4,
+        "file": "image4.jpeg",
+        "group": "湘江新区的培训与交流",
+        "title": "会议上的发言",
+        "caption": "坐在话筒与电脑前介绍业务，这一刻也出现在当地媒体的新闻画面中。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-04.jpg",
+        "width": 1267,
+        "height": 845,
+        "sourceSha256": "37dd95f94ae11a6bb66d9d3584075b766a4479124909c4f9290aaa616a34d6f6"
+      },
+      {
+        "index": 5,
+        "file": "image5.jpeg",
+        "group": "FFC 的夜色与高处的风景",
+        "title": "夜晚的 FFC",
+        "caption": "夜晚的楼宇亮起灯光。来到这里以后，我开始参与省级湘信贷平台建设。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-05.jpg",
+        "width": 1200,
+        "height": 1600,
+        "sourceSha256": "28237f4d82349ecd1ab7cdd1bac6b7bc98ab493199766e271477cd32d6559edd"
+      },
+      {
+        "index": 6,
+        "file": "image6.jpeg",
+        "group": "FFC 的夜色与高处的风景",
+        "title": "41A 楼层望出去的城市",
+        "caption": "工作累了，就看看远方。城市与天边的余光，给忙碌的一天留下一点舒缓。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-06.jpg",
+        "width": 1266,
+        "height": 1069,
+        "sourceSha256": "f09ffe27cca1b73e6ff4599e437f3278e4f03450bfc5c59e4214c2aa8e802260"
+      },
+      {
+        "index": 7,
+        "file": "image7.jpeg",
+        "group": "宁乡的建设与培训",
+        "title": "宁乡创业大楼",
+        "caption": "宁乡金融超市平台建设完成后，第一次培训安排在这座大楼里。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-07.jpg",
+        "width": 1199,
+        "height": 1600,
+        "sourceSha256": "25b32bd57ed70f74b4c6558d45bbd37c23b30e1482e146411689fe90e885b393"
+      },
+      {
+        "index": 8,
+        "file": "image8.jpeg",
+        "group": "宁乡的建设与培训",
+        "title": "大规模培训与服务对接活动",
+        "caption": "宁乡市“金融超市”园区专场服务对接暨“湘信贷”“星城投融荟”进园区活动现场。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-08.jpg",
+        "width": 1267,
+        "height": 845,
+        "sourceSha256": "b6ebc4ed5e12f46683f9a7736b2154b7891fe5e1b73807dfc3e323707fab53c2"
+      },
+      {
+        "index": 9,
+        "file": "image9.jpeg",
+        "group": "宁乡的建设与培训",
+        "title": "站到台前介绍业务",
+        "caption": "在活动现场介绍平台和相关业务，面对台下的听众，心里既紧张，也有些激动。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-09.jpg",
+        "width": 1067,
+        "height": 1600,
+        "sourceSha256": "f42a671a43af867eb61a186c92c03b399388af081d80a2231efc0ba4d9159d41"
+      },
+      {
+        "index": 10,
+        "file": "image10.jpeg",
+        "group": "出差途中与企业服务交流",
+        "title": "株洲西站上空的云",
+        "caption": "在株洲西站拍下这片云。它的形状让我想到一位仙女，于是把路上这一刻留了下来。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-10.jpg",
+        "width": 1264,
+        "height": 948,
+        "sourceSha256": "d9a1a86b8fd70d348de52519f12ee988735c5f969b5dca597e63281a43b87530"
+      },
+      {
+        "index": 11,
+        "file": "image11.jpeg",
+        "group": "出差途中与企业服务交流",
+        "title": "长沙经开区企业融资交流会",
+        "caption": "长沙经开区“我为企业找资金”交流会的现场，也留在企业融资服务的工作记录里。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-11.jpg",
+        "width": 1264,
+        "height": 948,
+        "sourceSha256": "012bd3a7ef79eb959cdcd97d16feadee8445babe464d6d4e4acdf9e1813920ef"
+      },
+      {
+        "index": 12,
+        "file": "image12.jpeg",
+        "group": "省级工作的日常与观摩",
+        "title": "省政府东门",
+        "caption": "省政府东门的照片，记录省级相关工作期间走过的地方。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-12.jpg",
+        "width": 1267,
+        "height": 950,
+        "sourceSha256": "27fc3ce060e65fa8bab41c3e99e81945ae245af3182e099fcb9ba64996129599"
+      },
+      {
+        "index": 13,
+        "file": "image13.jpeg",
+        "group": "省级工作的日常与观摩",
+        "title": "食堂里的日常",
+        "caption": "省政府食堂里的用餐场景。工作经历里，也有这些平常的生活片段。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-13.jpg",
+        "width": 750,
+        "height": 1000,
+        "sourceSha256": "945665fb313156f099a439fdca73a84e85dd9731f3060177e8dbf42e667b160b"
+      },
+      {
+        "index": 14,
+        "file": "image14.jpeg",
+        "group": "省级工作的日常与观摩",
+        "title": "省级观摩会",
+        "caption": "会议室里的投影、电脑和资料，记录参与省级观摩会时的工作场景。",
+        "missing": false,
+        "src": "/img/work/changsha/changsha-14.jpg",
+        "width": 1200,
+        "height": 1600,
+        "sourceSha256": "6b2741e145e4a5f8def048d170460d4347c7449d5273302a339be8b0130fb6f0"
+      }
+    ]
   }
 ]

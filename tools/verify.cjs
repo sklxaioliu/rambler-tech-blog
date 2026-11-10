@@ -32,7 +32,10 @@ for (const file of posts) {
     assert.ok(md.includes('## ' + section), `${file} 缺少 ${section}`);
   }
   const policyArticle = /categories: \[信用体系建设\]/.test(md);
-  if (experienceArticle) assert.ok(md.includes('github.com/sklxaioliu/sklxaioliu.github.io') && md.includes('/img/work/'), `${file} 缺少原始记录来源或经历配图`);
+  if (experienceArticle) {
+    const meta = yaml.load(md.match(/^---\r?\n([\s\S]*?)\r?\n---/)[1]);
+    assert.ok((meta.original_url || meta.source_type === 'author_document') && md.includes('/img/work/'), `${file} 缺少作者来源记录或经历配图`);
+  }
   else if (!policyArticle) assert.ok(md.includes('```'), `${file} 缺少代码示例`);
   else assert.ok(md.includes('## 官方依据') && md.includes('/img/policy/'), `${file} 缺少依据或配图`);
   assert.ok(md.length > 1300, `${file} 内容过短`);
