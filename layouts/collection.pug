@@ -12,6 +12,11 @@ block content
           i.far.fa-compass
           | 按学习路线开始
         span=site.posts.toArray().filter(post => post.categories.toArray().some(category => category.name === page.category)).length + ' 篇学习笔记'
+      if page.category === 'SQL 数据库'
+        .collection-links
+          a(href=url_for('/mysql-learning/'))
+            i.fas.fa-route
+            | MySQL 知识图解 · 按 01—19 顺序开始
     .lesson-grid.article-sort
       each post in page.posts.toArray()
         - const lessonIndex = module ? module.posts.indexOf(post.slug) : -1
@@ -19,11 +24,11 @@ block content
           .lesson-card-top
             span.lesson-icon
               i(class=module ? module.icon : 'fas fa-book-open')
-            span.lesson-series=lessonIndex >= 0 ? 'LESSON ' + String(lessonIndex + 1).padStart(2,'0') : 'LEARNING NOTE'
+            span.lesson-series=post.series === 'mysql-knowledge' ? 'MYSQL ' + String(post.series_order).padStart(2,'0') + ' / 19' : page.category === '工作经历' ? 'WORK & LIFE' : lessonIndex >= 0 ? 'LESSON ' + String(lessonIndex + 1).padStart(2,'0') : 'LEARNING NOTE'
             i.fas.fa-arrow-up-right-from-square
           h3=post.title
           p=post.description
           .lesson-card-bottom
-            span 概念解释 · 操作示范 · 练习复盘
+            span=post.series === 'mysql-knowledge' ? '图示详解 · 连贯案例 · 顺序阅读' : page.category === '工作经历' ? '工作记录 · 项目经历 · 生活片段' : '概念解释 · 操作示范 · 练习复盘'
             time(datetime=date_xml(post.date))=date(post.date,'YYYY.MM.DD')
     include includes/pagination.pug

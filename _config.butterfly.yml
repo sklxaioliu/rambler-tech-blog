@@ -75,7 +75,7 @@ aside:
       link: /guide/
   card_announcement:
     enable: true
-    content: 七大学习模块已上线，新增信用体系建设：读懂国家政策、信用修复与文明城市建设。技术教程边读边练，政策事项请核对官方现行要求。
+    content: MySQL 知识图解 19 篇已上线，按顺序理解概念、查询、索引与事务。附逐图说明和统一样例，欢迎从 SQL 栏目开始阅读。
   card_recent_post:
     enable: true
     limit: 5
@@ -83,6 +83,17 @@ aside:
     enable: true
     orderby: name
     limit: 25
+  card_post_series:
+    enable: true
+    series_title: false
+    orderBy: title
+    order: 1
+# 启用 Butterfly 原生系列分组，供新教程的系列侧栏与导航使用。
+series:
+  enable: true
+  orderBy: title
+  order: 1
+  number: true
 footer:
   owner:
     enable: true

@@ -1,0 +1,154 @@
+[
+  {
+    "order": 1,
+    "slug": "mysql-knowledge-01-concepts",
+    "title": "MySQL 知识图解 01：数据库、表与 SQL 的关系",
+    "pages": "1-5",
+    "description": "分清数据、数据库、管理系统与应用，建立关系型数据库的基本认识。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/tutorial.html"
+  },
+  {
+    "order": 2,
+    "slug": "mysql-knowledge-02-installation",
+    "title": "MySQL 知识图解 02：Windows 安装、连接与工具使用",
+    "pages": "6-20",
+    "description": "把安装程序、启动服务与账号连接分开理解，核对终端与图形工具参数。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/windows-installation.html"
+  },
+  {
+    "order": 3,
+    "slug": "mysql-knowledge-03-database-sql",
+    "title": "MySQL 知识图解 03：SQL 分类、语法与数据库管理",
+    "pages": "21-28",
+    "description": "认识 SQL 操作层级，创建、选择和检查独立学习库。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/creating-database.html"
+  },
+  {
+    "order": 4,
+    "slug": "mysql-knowledge-04-data-types",
+    "title": "MySQL 知识图解 04：字段类型、字符集与精度选择",
+    "pages": "29-31",
+    "description": "为整数、金额、文字、日期与二进制内容选择合适类型。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/data-types.html"
+  },
+  {
+    "order": 5,
+    "slug": "mysql-knowledge-05-table-ddl",
+    "title": "MySQL 知识图解 05：建表、改表与结构检查",
+    "pages": "32-46",
+    "description": "理解表结构演变，逐步完成改名、改类型、加列与删列。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/alter-table.html"
+  },
+  {
+    "order": 6,
+    "slug": "mysql-knowledge-06-constraints",
+    "title": "MySQL 知识图解 06：主键、外键与数据约束",
+    "pages": "47-67",
+    "description": "从参照关系看懂主键、外键、唯一、非空、默认值与 CHECK。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/create-table.html"
+  },
+  {
+    "order": 7,
+    "slug": "mysql-knowledge-07-dml",
+    "title": "MySQL 知识图解 07：插入、默认值、更新与删除",
+    "pages": "68-74",
+    "description": "用专用实验表理解数据写入，并区分删除行、清空表与删表。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/insert.html"
+  },
+  {
+    "order": 8,
+    "slug": "mysql-knowledge-08-select",
+    "title": "MySQL 知识图解 08：选列、表达式、空值与去重",
+    "pages": "75-89",
+    "description": "逐行理解 SELECT 的输出、计算、别名、NULL 和 DISTINCT。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/select.html"
+  },
+  {
+    "order": 9,
+    "slug": "mysql-knowledge-09-conditions",
+    "title": "MySQL 知识图解 09：条件筛选、逻辑组合与排序",
+    "pages": "90-104",
+    "description": "掌握范围、集合、模式与空值条件，理解括号和稳定排序。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/comparison-operators.html"
+  },
+  {
+    "order": 10,
+    "slug": "mysql-knowledge-10-string-number-functions",
+    "title": "MySQL 知识图解 10：字符与数字函数的加工过程",
+    "pages": "107-115",
+    "description": "以输入和输出解释文本处理、字节长度、取整和数学函数。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/string-functions.html"
+  },
+  {
+    "order": 11,
+    "slug": "mysql-knowledge-11-date-case-functions",
+    "title": "MySQL 知识图解 11：日期、类型转换与条件表达式",
+    "pages": "116-124",
+    "description": "理解日期存储、格式化、解析与 IF、CASE、空值处理。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/date-and-time-functions.html"
+  },
+  {
+    "order": 12,
+    "slug": "mysql-knowledge-12-joins",
+    "title": "MySQL 知识图解 12：图解内外连接、自连接与多表查询",
+    "pages": "127-152",
+    "description": "用匹配和未匹配记录解释连接类型，并正确合并全外连接结果。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/join.html"
+  },
+  {
+    "order": 13,
+    "slug": "mysql-knowledge-13-aggregation",
+    "title": "MySQL 知识图解 13：聚合、分组与 HAVING 的先后关系",
+    "pages": "155-169",
+    "description": "看懂明细如何变成分组汇总，辨别 COUNT 和 NULL 的报表口径。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/aggregate-functions.html"
+  },
+  {
+    "order": 14,
+    "slug": "mysql-knowledge-14-subqueries",
+    "title": "MySQL 知识图解 14：单行、多行与相关子查询",
+    "pages": "172-179",
+    "description": "根据返回形状选择比较方式，理解 ANY、ALL、EXISTS 与空值。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/subqueries.html"
+  },
+  {
+    "order": 15,
+    "slug": "mysql-knowledge-15-indexes",
+    "title": "MySQL 知识图解 15：普通、唯一与联合索引的使用",
+    "pages": "183-195",
+    "description": "看懂索引顺序、最左前缀与维护成本，用执行计划核对访问路径。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/multiple-column-indexes.html"
+  },
+  {
+    "order": 16,
+    "slug": "mysql-knowledge-16-transactions",
+    "title": "MySQL 知识图解 16：事务、并发与隔离级别",
+    "pages": "196-204",
+    "description": "沿时间线理解提交、回滚、保存点和不同会话的可见性。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html"
+  },
+  {
+    "order": 17,
+    "slug": "mysql-knowledge-17-accounts",
+    "title": "MySQL 知识图解 17：用户、授权与最小权限",
+    "pages": "205-214",
+    "description": "建立独立账号，核对允许主机和权限范围，使用现代授权语法。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/account-management-statements.html"
+  },
+  {
+    "order": 18,
+    "slug": "mysql-knowledge-18-backup",
+    "title": "MySQL 知识图解 18：SQL 导出、导入与恢复核对",
+    "pages": "215-216",
+    "description": "检查 SQL 文件范围，在独立库恢复并核对备份是否可用。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/mysqldump.html"
+  },
+  {
+    "order": 19,
+    "slug": "mysql-knowledge-19-pagination",
+    "title": "MySQL 知识图解 19：LIMIT、OFFSET 与稳定分页",
+    "pages": "216-219",
+    "description": "理解页码和偏移量，并比较普通分页与继续查找的方式。",
+    "reference": "https://dev.mysql.com/doc/refman/8.4/en/limit-optimization.html"
+  }
+]

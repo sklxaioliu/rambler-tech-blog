@@ -27,7 +27,8 @@ for (const m of modules) for (const slug of m.posts) assert.ok(posts.includes(sl
 for (const file of posts) {
   const md = fs.readFileSync(path.join(root, 'source/_posts', file), 'utf8');
   const experienceArticle = /categories: \[工作经历\]/.test(md);
-  const sections = experienceArticle ? ['写在前面', '回望这段经历'] : ['先用一个例子理解', '练习与参考答案', '学习目标', '基础知识', '操作步骤', '实际应用', '常见问题', '知识总结', '下一篇教程'];
+  const seriesArticle = /series: mysql-knowledge/.test(md);
+  const sections = experienceArticle ? ['写在前面', '回望这段经历'] : seriesArticle ? ['学习目标', '先用一个例子理解', '基础知识', '图示详解', '操作步骤', '实际应用', '易错点', '知识总结', '下一篇教程'] : ['先用一个例子理解', '练习与参考答案', '学习目标', '基础知识', '操作步骤', '实际应用', '常见问题', '知识总结', '下一篇教程'];
   for (const section of sections) {
     assert.ok(md.includes('## ' + section), `${file} 缺少 ${section}`);
   }
@@ -56,6 +57,32 @@ for (const module of modules) {
   assert.equal(count, module.posts.length, module.name + ' 分页文章数不符');
 }
 const search = fs.readFileSync(path.join(pub, 'search.xml'), 'utf8');
+const mysqlSeriesPath = path.join(root,'source/_data/mysql-series.json');
+if (fs.existsSync(mysqlSeriesPath)) {
+  const series=JSON.parse(fs.readFileSync(mysqlSeriesPath,'utf8'));
+  assert.equal(series.length,19,'MySQL 图解系列数量不符');
+  assert.ok(fs.existsSync(path.join(pub,'mysql-learning/index.html')),'缺少 MySQL 系列目录');
+  assert.ok(fs.existsSync(path.join(pub,'downloads/mysql-knowledge-lab.sql')),'缺少统一样例脚本');
+  const sqlModule=modules.find(m=>m.slug==='sql');
+  assert.deepEqual(sqlModule.posts.slice(0,series.length),series.map(s=>s.slug),'系列学习顺序错误');
+  const actualOrder=[];
+  const pageCount=Math.ceil(sqlModule.posts.length/config.per_page);
+  for(let i=1;i<=pageCount;i++){
+    const file=path.join(pub,'categories/sql',i===1?'index.html':`page/${i}/index.html`);
+    const html=fs.readFileSync(file,'utf8');
+    for(const [tag] of html.matchAll(/<a\b[^>]*class="[^"]*\barticle-sort-item-title\b[^"]*"[^>]*>/g)){
+      const href=tag.match(/href="([^"]+)"/);
+      if(href)actualOrder.push(href[1]);
+    }
+  }
+  assert.deepEqual(actualOrder.slice(0,series.length),series.map(s=>`${siteRoot}posts/${s.slug}/`),'分类分页未按 01—19 展示');
+  for(const item of series){
+    const md=fs.readFileSync(path.join(root,`source/_posts/${item.slug}.md`),'utf8');
+    assert.ok(!/实时效果反馈|\n##? .*练习|\n##? .*问答|1=>|尚学堂百战程序员/.test(md),'残留广告或问答：'+item.slug);
+    assert.ok(md.includes('/img/mysql-guide/'),'缺少配图：'+item.slug);
+    assert.ok(md.includes('## 图示详解'),'缺少图解说明：'+item.slug);
+  }
+}
 // 相册独立核对顺序、可用文件、尺寸和逐图说明；缺失原图用文字卡片，不生成死链接。
 const galleryPath = path.join(root, 'source/_data/work-galleries.json');
 if (fs.existsSync(galleryPath)) {

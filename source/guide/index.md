@@ -2,31 +2,50 @@
 title: 学习路线
 date: 2026-10-01 08:00:00
 updated: 2026-10-23 09:10:00
-description: 9 大学习模块、47 篇文章，涵盖技术、办公、信用体系建设与工作经历，按顺序阅读并实践。
+description: 9 大学习模块、66 篇文章，涵盖技术、办公、信用体系建设与工作经历，按顺序阅读并实践。
 ---
 
 ## 先选一个小目标
 
-当前共有 47 篇文章。技术教程包含基础知识、步骤、案例与练习；工作经历按实习和项目现场组织，保留原始记录来源。先阅读目标和环境要求，再在自己的实验文件或练习库操作，保留原始数据。
+当前共有 66 篇文章。技术教程包含基础知识、步骤、案例与练习；工作经历按实习和项目现场组织，保留原始记录来源。先阅读目标和环境要求，再在自己的实验文件或练习库操作，保留原始数据。
 
 SQL 以 MySQL 8.4 为基准，进阶系列先从表结构教程下载统一样例脚本。Office 以 Windows 桌面版 Microsoft 365／Office 2024 为基准；XLOOKUP 等功能会注明版本差异，不把 WPS、Mac 或网页版视为完全相同的界面。
 
 ## 01 / SQL 数据库
 
-从增删改查，到存储过程、游标与备份。
+从数据库概念到查询、索引与事务，按图解系列循序学习。
 
-1. [SQL 数据库基础入门](/posts/sql-basics/)
-2. [MySQL 安装与环境配置](/posts/mysql-install/)
-3. [SQL 增删改查详解](/posts/sql-crud/)
-4. [JOIN 多表连接查询](/posts/sql-joins/)
-5. [索引、事务与数据库优化](/posts/sql-performance/)
-6. [SQL 数据类型、约束与表结构设计](/posts/sql-schema/)
-7. [SQL 聚合、子查询与集合思维](/posts/sql-aggregation/)
-8. [SQL CTE 与窗口函数：排名、累计和前后比较](/posts/sql-window-cte/)
-9. [MySQL 视图与触发器：封装查询和记录变更](/posts/sql-views-triggers/)
-10. [MySQL 存储过程详解：参数、分支、事务与异常](/posts/sql-procedures/)
-11. [MySQL 游标与循环：逐行读取及 NOT FOUND 处理](/posts/sql-cursors/)
-12. [MySQL 账号权限、备份与恢复演练](/posts/sql-backup-security/)
+1. [MySQL 知识图解 01：数据库、表与 SQL 的关系](/posts/mysql-knowledge-01-concepts/)
+2. [MySQL 知识图解 02：Windows 安装、连接与工具使用](/posts/mysql-knowledge-02-installation/)
+3. [MySQL 知识图解 03：SQL 分类、语法与数据库管理](/posts/mysql-knowledge-03-database-sql/)
+4. [MySQL 知识图解 04：字段类型、字符集与精度选择](/posts/mysql-knowledge-04-data-types/)
+5. [MySQL 知识图解 05：建表、改表与结构检查](/posts/mysql-knowledge-05-table-ddl/)
+6. [MySQL 知识图解 06：主键、外键与数据约束](/posts/mysql-knowledge-06-constraints/)
+7. [MySQL 知识图解 07：插入、默认值、更新与删除](/posts/mysql-knowledge-07-dml/)
+8. [MySQL 知识图解 08：选列、表达式、空值与去重](/posts/mysql-knowledge-08-select/)
+9. [MySQL 知识图解 09：条件筛选、逻辑组合与排序](/posts/mysql-knowledge-09-conditions/)
+10. [MySQL 知识图解 10：字符与数字函数的加工过程](/posts/mysql-knowledge-10-string-number-functions/)
+11. [MySQL 知识图解 11：日期、类型转换与条件表达式](/posts/mysql-knowledge-11-date-case-functions/)
+12. [MySQL 知识图解 12：图解内外连接、自连接与多表查询](/posts/mysql-knowledge-12-joins/)
+13. [MySQL 知识图解 13：聚合、分组与 HAVING 的先后关系](/posts/mysql-knowledge-13-aggregation/)
+14. [MySQL 知识图解 14：单行、多行与相关子查询](/posts/mysql-knowledge-14-subqueries/)
+15. [MySQL 知识图解 15：普通、唯一与联合索引的使用](/posts/mysql-knowledge-15-indexes/)
+16. [MySQL 知识图解 16：事务、并发与隔离级别](/posts/mysql-knowledge-16-transactions/)
+17. [MySQL 知识图解 17：用户、授权与最小权限](/posts/mysql-knowledge-17-accounts/)
+18. [MySQL 知识图解 18：SQL 导出、导入与恢复核对](/posts/mysql-knowledge-18-backup/)
+19. [MySQL 知识图解 19：LIMIT、OFFSET 与稳定分页](/posts/mysql-knowledge-19-pagination/)
+20. [SQL 数据库基础入门](/posts/sql-basics/)
+21. [MySQL 安装与环境配置](/posts/mysql-install/)
+22. [SQL 增删改查详解](/posts/sql-crud/)
+23. [JOIN 多表连接查询](/posts/sql-joins/)
+24. [索引、事务与数据库优化](/posts/sql-performance/)
+25. [SQL 数据类型、约束与表结构设计](/posts/sql-schema/)
+26. [SQL 聚合、子查询与集合思维](/posts/sql-aggregation/)
+27. [SQL CTE 与窗口函数：排名、累计和前后比较](/posts/sql-window-cte/)
+28. [MySQL 视图与触发器：封装查询和记录变更](/posts/sql-views-triggers/)
+29. [MySQL 存储过程详解：参数、分支、事务与异常](/posts/sql-procedures/)
+30. [MySQL 游标与循环：逐行读取及 NOT FOUND 处理](/posts/sql-cursors/)
+31. [MySQL 账号权限、备份与恢复演练](/posts/sql-backup-security/)
 
 ## 02 / 虚拟机技术
 
