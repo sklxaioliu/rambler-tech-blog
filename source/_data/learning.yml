@@ -1,12 +1,24 @@
-# 栏目与阅读顺序统一维护。MySQL 知识图解按 01—19 放在 SQL 栏目前部。
+# 栏目文章按此顺序分页展示；新增系列追加，不改变原有教程编号。
 - name: SQL 数据库
   slug: sql
   icon: fas fa-database
   style: portal-sql
-  description: 从数据库概念到查询、索引与事务，按图解系列循序学习。
+  description: 先从 SQL 基础入门，逐步学习查询与进阶操作，再按 MySQL 知识图解补充巩固。
   track: SQL / MySQL
   cover: sql
   posts:
+    - sql-basics
+    - mysql-install
+    - sql-crud
+    - sql-joins
+    - sql-performance
+    - sql-schema
+    - sql-aggregation
+    - sql-window-cte
+    - sql-views-triggers
+    - sql-procedures
+    - sql-cursors
+    - sql-backup-security
     - mysql-knowledge-01-concepts
     - mysql-knowledge-02-installation
     - mysql-knowledge-03-database-sql
@@ -26,18 +38,6 @@
     - mysql-knowledge-17-accounts
     - mysql-knowledge-18-backup
     - mysql-knowledge-19-pagination
-    - sql-basics
-    - mysql-install
-    - sql-crud
-    - sql-joins
-    - sql-performance
-    - sql-schema
-    - sql-aggregation
-    - sql-window-cte
-    - sql-views-triggers
-    - sql-procedures
-    - sql-cursors
-    - sql-backup-security
 - name: 虚拟机技术
   slug: virtualization
   icon: fas fa-layer-group

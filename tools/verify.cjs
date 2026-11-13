@@ -15,6 +15,19 @@ const walk = dir => fs.readdirSync(dir, {withFileTypes: true}).flatMap(e => e.is
 const files = walk(pub);
 const modules = yaml.load(fs.readFileSync(path.join(root, 'source/_data/learning.yml'), 'utf8'));
 const expectedPosts = modules.reduce((sum, module) => sum + module.posts.length, 0);
+// 检查真实分页后的顺序，避免只给卡片改编号却仍按日期排列。
+for (const module of modules) {
+  const actual = [];
+  const perPage = config.category_generator?.per_page || config.per_page;
+  for (let page = 1; page <= Math.ceil(module.posts.length / perPage); page++) {
+    const file = path.join(pub, 'categories', module.slug, page === 1 ? 'index.html' : `page/${page}/index.html`);
+    const html = fs.readFileSync(file, 'utf8');
+    for (const [tag] of html.matchAll(/<a\b[^>]*class="[^"]*\barticle-sort-item-title\b[^"]*"[^>]*>/g)) {
+      actual.push(tag.match(/href="([^"]+)"/)[1]);
+    }
+  }
+  assert.deepEqual(actual, module.posts.map(slug => `${siteRoot}posts/${slug}/`), `${module.name} 学习顺序错误`);
+}
 const home = fs.readFileSync(path.join(pub, 'index.html'), 'utf8');
 assert.ok(home.includes('id="portal-home"'), '首页门户视图未注册');
 for (const route of [...modules.map(m => 'categories/' + m.slug + '/'), 'guide/', 'archives/', 'tags/']) {
@@ -64,7 +77,7 @@ if (fs.existsSync(mysqlSeriesPath)) {
   assert.ok(fs.existsSync(path.join(pub,'mysql-learning/index.html')),'缺少 MySQL 系列目录');
   assert.ok(fs.existsSync(path.join(pub,'downloads/mysql-knowledge-lab.sql')),'缺少统一样例脚本');
   const sqlModule=modules.find(m=>m.slug==='sql');
-  assert.deepEqual(sqlModule.posts.slice(0,series.length),series.map(s=>s.slug),'系列学习顺序错误');
+  assert.deepEqual(sqlModule.posts.slice(-series.length),series.map(s=>s.slug),'系列学习顺序错误');
   const actualOrder=[];
   const pageCount=Math.ceil(sqlModule.posts.length/config.per_page);
   for(let i=1;i<=pageCount;i++){
@@ -75,7 +88,7 @@ if (fs.existsSync(mysqlSeriesPath)) {
       if(href)actualOrder.push(href[1]);
     }
   }
-  assert.deepEqual(actualOrder.slice(0,series.length),series.map(s=>`${siteRoot}posts/${s.slug}/`),'分类分页未按 01—19 展示');
+  assert.deepEqual(actualOrder,sqlModule.posts.map(s=>`${siteRoot}posts/${s}/`),'SQL 分类分页未按学习路线展示');
   for(const item of series){
     const md=fs.readFileSync(path.join(root,`source/_posts/${item.slug}.md`),'utf8');
     assert.ok(!/实时效果反馈|\n##? .*练习|\n##? .*问答|1=>|尚学堂百战程序员/.test(md),'残留广告或问答：'+item.slug);

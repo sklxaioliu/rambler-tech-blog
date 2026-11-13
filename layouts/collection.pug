@@ -18,8 +18,8 @@ block content
             i.fas.fa-route
             | MySQL 知识图解 · 按 01—19 顺序开始
     .lesson-grid.article-sort
-      each post in page.posts.toArray()
-        - const lessonIndex = module ? module.posts.indexOf(post.slug) : -1
+      each post in (Array.isArray(page.posts) ? page.posts : page.posts.toArray())
+        - const lessonIndex = module ? module.posts.filter(slug => !slug.startsWith('mysql-knowledge-')).indexOf(post.slug) : -1
         a.lesson-card.article-sort-item.article-sort-item-title(href=url_for(post.path))
           .lesson-card-top
             span.lesson-icon
