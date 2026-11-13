@@ -68,6 +68,14 @@ jobs:
           git add source/_posts/mysql-knowledge-*.md source/img/mysql-guide source/_data/mysql-series.json source/_data/learning.yml source/mysql-learning/index.md source/downloads/mysql-knowledge-lab.sql source/guide/index.md _config.butterfly.yml layouts/collection.pug tools/verify.cjs docs/MYSQL-KNOWLEDGE-2026-11-13.md
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Publish 19 MySQL tutorials with 20 explained diagrams'
           git push
+      - name: Import stable learning order fix
+        if: hashFiles('scripts/learning-order.js') == '' && hashFiles('learning-order-fix.zip') != ''
+        run: |
+          echo 'b2c8168de9b8c43a88b7d8b9f7267b305c57f6066d87c1d2ed8e0836eddfc018  learning-order-fix.zip' | sha256sum --check
+          unzip -oq learning-order-fix.zip
+          git add scripts/learning-order.js layouts/collection.pug source/_data/learning.yml source/guide/index.md tools/verify.cjs
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Fix category pagination to follow stable learning order'
+          git push
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
