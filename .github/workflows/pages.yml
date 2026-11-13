@@ -60,6 +60,14 @@ jobs:
           git add source/_posts/changsha-credit-platform-career.md source/_data/learning.yml source/_data/work-galleries.json source/guide/index.md source/img/work/changsha tools/verify.cjs tools/import-work-photos.py docs/ASSETS.md docs/CHANGSHA-WORK-2026-11-10.md
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Publish Changsha credit platform career article and 14 photos'
           git push
+      - name: Import MySQL illustrated learning series
+        if: hashFiles('source/mysql-learning/index.md') == '' && hashFiles('mysql-knowledge-update.zip') != ''
+        run: |
+          echo '3cec906c6257eb8b6f7e4ab6ca208cdc57ed0e3c915de667ab645f47043925a1  mysql-knowledge-update.zip' | sha256sum --check
+          unzip -oq mysql-knowledge-update.zip
+          git add source/_posts/mysql-knowledge-*.md source/img/mysql-guide source/_data/mysql-series.json source/_data/learning.yml source/mysql-learning/index.md source/downloads/mysql-knowledge-lab.sql source/guide/index.md _config.butterfly.yml layouts/collection.pug tools/verify.cjs docs/MYSQL-KNOWLEDGE-2026-11-13.md
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Publish 19 MySQL tutorials with 20 explained diagrams'
+          git push
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
